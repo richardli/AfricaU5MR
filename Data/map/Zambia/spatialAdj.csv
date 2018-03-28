@@ -1,0 +1,10 @@
+"","central","copperbelt","eastern","luapula","lusaka","north-western","northern","southern","western"
+"central",0,1,1,0,1,1,1,1,1
+"copperbelt",1,0,0,0,0,0,1,0,0
+"eastern",1,0,0,0,1,1,0,0,0
+"luapula",0,0,0,0,0,1,0,0,0
+"lusaka",1,0,1,0,0,0,0,1,0
+"north-western",1,0,1,1,0,0,0,0,0
+"northern",1,1,0,0,0,0,0,0,1
+"southern",1,0,0,0,1,0,0,0,1
+"western",1,0,0,0,0,0,1,1,0

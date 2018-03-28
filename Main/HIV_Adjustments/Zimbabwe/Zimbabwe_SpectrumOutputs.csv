@@ -1,0 +1,511 @@
+"Country","Region","Year","Births","Maternal_Population","Maternal_PosPop","Infant_Incidence","Maternal_Prevalence"
+"Zimbabwe","Bulawayo",1970,14174,92286,0,0,0
+"Zimbabwe","Bulawayo",1971,13759,94929,0,0,0
+"Zimbabwe","Bulawayo",1972,14181,97216,0,0,0
+"Zimbabwe","Bulawayo",1973,14561,99244,0,0,0
+"Zimbabwe","Bulawayo",1974,14918,101171,0,0,0
+"Zimbabwe","Bulawayo",1975,15229,102951,9.9347715,2,0.00965
+"Zimbabwe","Bulawayo",1976,15457,104803,17.1248102,2,0.01634
+"Zimbabwe","Bulawayo",1977,15657,106781,31.0946272,2,0.02912
+"Zimbabwe","Bulawayo",1978,15788,109030,56.303092,3,0.05164
+"Zimbabwe","Bulawayo",1979,15895,111705,100.4116245,4,0.08989
+"Zimbabwe","Bulawayo",1980,15993,114791,176.5944744,6,0.15384
+"Zimbabwe","Bulawayo",1981,16171,119591,302.4695572,9,0.25292
+"Zimbabwe","Bulawayo",1982,16409,124072,794.7183816,22,0.64053
+"Zimbabwe","Bulawayo",1983,16489,128155,1601.9375,41,1.25
+"Zimbabwe","Bulawayo",1984,16431,131888,2875.1584,70,2.18
+"Zimbabwe","Bulawayo",1985,16274,135366,4737.81,111,3.5
+"Zimbabwe","Bulawayo",1986,16113,139429,7250.308,163,5.2
+"Zimbabwe","Bulawayo",1987,16102,143602,10511.6664,232,7.32
+"Zimbabwe","Bulawayo",1988,16144,147706,14504.7292,317,9.82
+"Zimbabwe","Bulawayo",1989,16355,151519,19167.1535,422,12.65
+"Zimbabwe","Bulawayo",1990,16547,154951,24125.8707,534,15.57
+"Zimbabwe","Bulawayo",1991,16646,157967,29018.5379,641,18.37
+"Zimbabwe","Bulawayo",1992,16710,160701,33474.0183,733,20.83
+"Zimbabwe","Bulawayo",1993,16790,163239,37120.5486,797,22.74
+"Zimbabwe","Bulawayo",1994,16359,165581,40004.3696,819,24.16
+"Zimbabwe","Bulawayo",1995,16446,167943,41985.75,835,25
+"Zimbabwe","Bulawayo",1996,16520,170170,43001.959,827,25.27
+"Zimbabwe","Bulawayo",1997,16561,172279,43190.3453,799,25.07
+"Zimbabwe","Bulawayo",1998,16629,174016,42755.7312,771,24.57
+"Zimbabwe","Bulawayo",1999,16040,175080,41721.564,708,23.83
+"Zimbabwe","Bulawayo",2000,15478,175011,40217.5278,652,22.98
+"Zimbabwe","Bulawayo",2001,14774,174141,38432.9187,589,22.07
+"Zimbabwe","Bulawayo",2002,14096,172853,36644.836,489,21.2
+"Zimbabwe","Bulawayo",2003,13392,171514,35108.9158,419,20.47
+"Zimbabwe","Bulawayo",2004,12766,170508,34033.3968,360,19.96
+"Zimbabwe","Bulawayo",2005,12536,170077,33964.3769,338,19.97
+"Zimbabwe","Bulawayo",2006,12754,170128,34059.6256,348,20.02
+"Zimbabwe","Bulawayo",2007,13526,170389,34197.0723,335,20.07
+"Zimbabwe","Bulawayo",2008,14378,171327,34830.7791,399,20.33
+"Zimbabwe","Bulawayo",2009,15372,173481,36274.8771,333,20.91
+"Zimbabwe","Bulawayo",2010,15937,177251,38233.0407,321,21.57
+"Zimbabwe","Bulawayo",2011,16337,182467,40671.8943,293,22.29
+"Zimbabwe","Bulawayo",2012,16809,188217,43176.9798,274,22.94
+"Zimbabwe","Bulawayo",2013,16942,193944,45615.6288,267,23.52
+"Zimbabwe","Bulawayo",2014,17023,199260,47862.252,224,24.02
+"Zimbabwe","Bulawayo",2015,17028,203913,49938.2937,342,24.49
+"Zimbabwe","Bulawayo",2016,16961,207366,51488.9778,216,24.83
+"Zimbabwe","Bulawayo",2017,16835,210688,52398.1056,188,24.87
+"Zimbabwe","Bulawayo",2018,16654,213721,53045.5522,174,24.82
+"Zimbabwe","Bulawayo",2019,16398,216352,53676.9312,172,24.81
+"Zimbabwe","Bulawayo",2020,16052,218484,54227.7288,165,24.82
+"Zimbabwe","Harare Chitungwiza",1970,51295,287005,0,0,0
+"Zimbabwe","Harare Chitungwiza",1971,50088,293994,0,0,0
+"Zimbabwe","Harare Chitungwiza",1972,51341,299959,0,0,0
+"Zimbabwe","Harare Chitungwiza",1973,52469,305319,0,0,0
+"Zimbabwe","Harare Chitungwiza",1974,53373,310670,0,0,0
+"Zimbabwe","Harare Chitungwiza",1975,54116,316017,7.900425,2,0.0025
+"Zimbabwe","Harare Chitungwiza",1976,54608,322033,18.6457107,2,0.00579
+"Zimbabwe","Harare Chitungwiza",1977,54925,328908,45.9155568,3,0.01396
+"Zimbabwe","Harare Chitungwiza",1978,55176,337075,107.18985,5,0.0318
+"Zimbabwe","Harare Chitungwiza",1979,55323,346995,236.3382945,9,0.06811
+"Zimbabwe","Harare Chitungwiza",1980,55592,358646,497.7289188,16,0.13878
+"Zimbabwe","Harare Chitungwiza",1981,55989,376996,977.0228336,29,0.25916
+"Zimbabwe","Harare Chitungwiza",1982,56773,394439,3106.2860128,88,0.78752
+"Zimbabwe","Harare Chitungwiza",1983,57110,410644,6898.8192,190,1.68
+"Zimbabwe","Harare Chitungwiza",1984,56943,425618,13194.158,351,3.1
+"Zimbabwe","Harare Chitungwiza",1985,56504,439520,22723.184,587,5.17
+"Zimbabwe","Harare Chitungwiza",1986,56304,455070,36269.079,923,7.97
+"Zimbabwe","Harare Chitungwiza",1987,56379,470550,54019.14,1372,11.48
+"Zimbabwe","Harare Chitungwiza",1988,55153,485360,75619.088,1898,15.58
+"Zimbabwe","Harare Chitungwiza",1989,54202,498697,99789.2697,2505,20.01
+"Zimbabwe","Harare Chitungwiza",1990,53085,510212,124440.7068,3123,24.39
+"Zimbabwe","Harare Chitungwiza",1991,51577,519815,147887.3675,3687,28.45
+"Zimbabwe","Harare Chitungwiza",1992,50008,527797,168314.4633,4130,31.89
+"Zimbabwe","Harare Chitungwiza",1993,48052,534544,185059.1328,4406,34.62
+"Zimbabwe","Harare Chitungwiza",1994,48504,540173,196731.0066,4638,36.42
+"Zimbabwe","Harare Chitungwiza",1995,50347,545521,204297.6145,4830,37.45
+"Zimbabwe","Harare Chitungwiza",1996,52152,550164,207466.8444,4803,37.71
+"Zimbabwe","Harare Chitungwiza",1997,53839,554358,206498.355,4616,37.25
+"Zimbabwe","Harare Chitungwiza",1998,55608,557623,201859.526,4389,36.2
+"Zimbabwe","Harare Chitungwiza",1999,54438,559327,193918.6709,3937,34.67
+"Zimbabwe","Harare Chitungwiza",2000,52986,558361,183254.0802,3500,32.82
+"Zimbabwe","Harare Chitungwiza",2001,51248,555868,170873.8232,3067,30.74
+"Zimbabwe","Harare Chitungwiza",2002,49604,552862,157731.5286,2570,28.53
+"Zimbabwe","Harare Chitungwiza",2003,47878,549626,144441.7128,2109,26.28
+"Zimbabwe","Harare Chitungwiza",2004,46392,546875,131796.875,1806,24.1
+"Zimbabwe","Harare Chitungwiza",2005,46022,544486,120603.649,1532,22.15
+"Zimbabwe","Harare Chitungwiza",2006,46904,542907,110807.3187,1366,20.41
+"Zimbabwe","Harare Chitungwiza",2007,50008,541650,101884.365,1106,18.81
+"Zimbabwe","Harare Chitungwiza",2008,53144,542179,95043.9787,916,17.53
+"Zimbabwe","Harare Chitungwiza",2009,56712,547080,90651.156,869,16.57
+"Zimbabwe","Harare Chitungwiza",2010,58796,557617,88270.7711,596,15.83
+"Zimbabwe","Harare Chitungwiza",2011,59896,573925,88212.2725,448,15.37
+"Zimbabwe","Harare Chitungwiza",2012,61212,592390,88621.544,430,14.96
+"Zimbabwe","Harare Chitungwiza",2013,62482,610492,87849.7988,372,14.39
+"Zimbabwe","Harare Chitungwiza",2014,63569,629523,88322.0769,281,14.03
+"Zimbabwe","Harare Chitungwiza",2015,64619,647499,88966.3626,258,13.74
+"Zimbabwe","Harare Chitungwiza",2016,63241,662749,88940.9158,262,13.42
+"Zimbabwe","Harare Chitungwiza",2017,61716,677785,88518.721,235,13.06
+"Zimbabwe","Harare Chitungwiza",2018,60063,691931,88082.8163,223,12.73
+"Zimbabwe","Harare Chitungwiza",2019,58212,704734,87527.9628,215,12.42
+"Zimbabwe","Harare Chitungwiza",2020,56083,715924,86841.5812,202,12.13
+"Zimbabwe","Manicaland",1970,30214,122143,0,0,0
+"Zimbabwe","Manicaland",1971,30181,127112,0,0,0
+"Zimbabwe","Manicaland",1972,31479,132636,0,0,0
+"Zimbabwe","Manicaland",1973,32881,138535,0,0,0
+"Zimbabwe","Manicaland",1974,34341,144566,0,0,0
+"Zimbabwe","Manicaland",1975,35799,150151,0.0300302,3,2e-05
+"Zimbabwe","Manicaland",1976,37183,155616,0.077808,2,5e-05
+"Zimbabwe","Manicaland",1977,38602,161127,0.1450143,2,9e-05
+"Zimbabwe","Manicaland",1978,39924,167196,0.3678312,3,0.00022
+"Zimbabwe","Manicaland",1979,41259,174395,1.0638095,3,0.00061
+"Zimbabwe","Manicaland",1980,42678,182789,3.3998754,3,0.00186
+"Zimbabwe","Manicaland",1981,44223,192494,10.779664,3,0.0056
+"Zimbabwe","Manicaland",1982,45766,202452,62.658894,6,0.03095
+"Zimbabwe","Manicaland",1983,47153,212348,206.720778,12,0.09735
+"Zimbabwe","Manicaland",1984,48061,222168,579.2808432,27,0.26074
+"Zimbabwe","Manicaland",1985,48648,231999,1459.6217085,63,0.62915
+"Zimbabwe","Manicaland",1986,49136,242693,3324.8941,136,1.37
+"Zimbabwe","Manicaland",1987,49745,253803,6979.5825,277,2.75
+"Zimbabwe","Manicaland",1988,49467,264981,13275.5481,510,5.01
+"Zimbabwe","Manicaland",1989,49547,275704,22966.1432,871,8.33
+"Zimbabwe","Manicaland",1990,49436,285807,36011.682,1364,12.6
+"Zimbabwe","Manicaland",1991,48977,295327,51623.1596,1957,17.48
+"Zimbabwe","Manicaland",1992,48396,304652,67906.9308,2555,22.29
+"Zimbabwe","Manicaland",1993,47513,314031,83343.8274,3071,26.54
+"Zimbabwe","Manicaland",1994,48089,323411,96117.7492,3493,29.72
+"Zimbabwe","Manicaland",1995,50191,333304,105624.0376,3798,31.69
+"Zimbabwe","Manicaland",1996,52235,343091,111573.1932,3896,32.52
+"Zimbabwe","Manicaland",1997,54241,352845,113792.5125,3798,32.25
+"Zimbabwe","Manicaland",1998,56147,362026,112952.112,3632,31.2
+"Zimbabwe","Manicaland",1999,56028,369825,109690.095,3338,29.66
+"Zimbabwe","Manicaland",2000,55513,374873,104289.6686,3034,27.82
+"Zimbabwe","Manicaland",2001,54661,378209,98031.7728,2739,25.92
+"Zimbabwe","Manicaland",2002,53860,380674,91590.1644,2447,24.06
+"Zimbabwe","Manicaland",2003,53058,382518,85645.7802,2165,22.39
+"Zimbabwe","Manicaland",2004,52468,384110,80663.1,1970,21
+"Zimbabwe","Manicaland",2005,52381,384667,76664.1331,1753,19.93
+"Zimbabwe","Manicaland",2006,52769,385118,74173.7268,1683,19.26
+"Zimbabwe","Manicaland",2007,55948,385884,73356.5484,1724,19.01
+"Zimbabwe","Manicaland",2008,56961,388223,73956.4815,1675,19.05
+"Zimbabwe","Manicaland",2009,58392,394826,76004.005,1571,19.25
+"Zimbabwe","Manicaland",2010,60500,407311,79344.1828,1643,19.48
+"Zimbabwe","Manicaland",2011,63314,425671,84197.7238,1640,19.78
+"Zimbabwe","Manicaland",2012,66598,447038,89362.8962,1307,19.99
+"Zimbabwe","Manicaland",2013,69752,469239,94317.039,1535,20.1
+"Zimbabwe","Manicaland",2014,72762,491163,98969.3445,1348,20.15
+"Zimbabwe","Manicaland",2015,75569,511770,103275.186,1517,20.18
+"Zimbabwe","Manicaland",2016,78219,532197,107557.0137,728,20.21
+"Zimbabwe","Manicaland",2017,80822,552619,110026.4429,623,19.91
+"Zimbabwe","Manicaland",2018,83329,572303,111713.5456,587,19.52
+"Zimbabwe","Manicaland",2019,85574,590692,113235.6564,595,19.17
+"Zimbabwe","Manicaland",2020,87375,606972,114292.8276,589,18.83
+"Zimbabwe","Mashonaland Central",1970,19525,88105,0,0,0
+"Zimbabwe","Mashonaland Central",1971,19507,91420,0,0,0
+"Zimbabwe","Mashonaland Central",1972,20268,95077,0,0,0
+"Zimbabwe","Mashonaland Central",1973,21071,98989,0,0,0
+"Zimbabwe","Mashonaland Central",1974,21927,103037,0,0,0
+"Zimbabwe","Mashonaland Central",1975,22758,106893,7.6535388,3,0.00716
+"Zimbabwe","Mashonaland Central",1976,23550,110767,16.7368937,3,0.01511
+"Zimbabwe","Mashonaland Central",1977,24372,114766,37.2874734,4,0.03249
+"Zimbabwe","Mashonaland Central",1978,25192,119200,78.75544,5,0.06607
+"Zimbabwe","Mashonaland Central",1979,25933,124413,158.1040404,8,0.12708
+"Zimbabwe","Mashonaland Central",1980,26773,130444,304.8606724,14,0.23371
+"Zimbabwe","Mashonaland Central",1981,27651,137656,562.462416,24,0.4086
+"Zimbabwe","Mashonaland Central",1982,28622,145031,1609.8441,66,1.11
+"Zimbabwe","Mashonaland Central",1983,29453,152359,3321.4262,132,2.18
+"Zimbabwe","Mashonaland Central",1984,30017,159603,5953.1919,229,3.73
+"Zimbabwe","Mashonaland Central",1985,30379,166786,9706.9452,364,5.82
+"Zimbabwe","Mashonaland Central",1986,30631,173396,14651.962,536,8.45
+"Zimbabwe","Mashonaland Central",1987,30926,180142,20752.3584,749,11.52
+"Zimbabwe","Mashonaland Central",1988,31266,186783,27662.5623,988,14.81
+"Zimbabwe","Mashonaland Central",1989,31933,193008,35166.0576,1269,18.22
+"Zimbabwe","Mashonaland Central",1990,32542,198700,42581.41,1546,21.43
+"Zimbabwe","Mashonaland Central",1991,32910,203887,49585.3184,1800,24.32
+"Zimbabwe","Mashonaland Central",1992,33121,208829,55819.9917,2006,26.73
+"Zimbabwe","Mashonaland Central",1993,33323,213754,60962.6408,2145,28.52
+"Zimbabwe","Mashonaland Central",1994,33662,218691,64885.6197,2225,29.67
+"Zimbabwe","Mashonaland Central",1995,34980,224096,67699.4016,2304,30.21
+"Zimbabwe","Mashonaland Central",1996,36357,229631,69601.1561,2355,30.31
+"Zimbabwe","Mashonaland Central",1997,37745,235304,70426.4872,2346,29.93
+"Zimbabwe","Mashonaland Central",1998,39099,240791,70310.972,2316,29.2
+"Zimbabwe","Mashonaland Central",1999,39215,245622,69388.215,2210,28.25
+"Zimbabwe","Mashonaland Central",2000,39109,248946,67389.6822,2074,27.07
+"Zimbabwe","Mashonaland Central",2001,38828,251318,64789.7804,1930,25.78
+"Zimbabwe","Mashonaland Central",2002,38607,253181,61826.8002,1749,24.42
+"Zimbabwe","Mashonaland Central",2003,38395,254901,58703.7003,1581,23.03
+"Zimbabwe","Mashonaland Central",2004,38253,256744,55610.7504,1451,21.66
+"Zimbabwe","Mashonaland Central",2005,37769,258293,52536.7962,1278,20.34
+"Zimbabwe","Mashonaland Central",2006,36997,260155,50001.791,1152,19.22
+"Zimbabwe","Mashonaland Central",2007,38088,262515,48118.9995,1129,18.33
+"Zimbabwe","Mashonaland Central",2008,38784,266235,46963.854,1046,17.64
+"Zimbabwe","Mashonaland Central",2009,39770,272592,46640.4912,954,17.11
+"Zimbabwe","Mashonaland Central",2010,41198,282592,47108.0864,820,16.67
+"Zimbabwe","Mashonaland Central",2011,43109,296257,48615.7737,589,16.41
+"Zimbabwe","Mashonaland Central",2012,45365,311825,50546.8325,423,16.21
+"Zimbabwe","Mashonaland Central",2013,47693,328005,52513.6005,393,16.01
+"Zimbabwe","Mashonaland Central",2014,49979,344059,54223.6984,301,15.76
+"Zimbabwe","Mashonaland Central",2015,52160,359307,55656.6543,400,15.49
+"Zimbabwe","Mashonaland Central",2016,54269,374241,56884.632,302,15.2
+"Zimbabwe","Mashonaland Central",2017,56367,389132,57513.7096,274,14.78
+"Zimbabwe","Mashonaland Central",2018,58416,403613,57797.3816,260,14.32
+"Zimbabwe","Mashonaland Central",2019,60310,417336,57967.9704,261,13.89
+"Zimbabwe","Mashonaland Central",2020,61925,429550,57903.34,254,13.48
+"Zimbabwe","Mashonaland East",1970,23060,95333,0,0,0
+"Zimbabwe","Mashonaland East",1971,22685,98774,0,0,0
+"Zimbabwe","Mashonaland East",1972,23173,102607,0,0,0
+"Zimbabwe","Mashonaland East",1973,23736,106731,0,0,0
+"Zimbabwe","Mashonaland East",1974,24346,111009,0,0,0
+"Zimbabwe","Mashonaland East",1975,24941,115056,9.4806144,3,0.00824
+"Zimbabwe","Mashonaland East",1976,25506,119107,19.9861546,3,0.01678
+"Zimbabwe","Mashonaland East",1977,26082,123268,42.9835516,4,0.03487
+"Zimbabwe","Mashonaland East",1978,26710,127879,87.5843271,6,0.06849
+"Zimbabwe","Mashonaland East",1979,27430,133315,168.056889,9,0.12606
+"Zimbabwe","Mashonaland East",1980,28297,139601,305.8937112,14,0.21912
+"Zimbabwe","Mashonaland East",1981,29327,146887,530.4530231,23,0.36113
+"Zimbabwe","Mashonaland East",1982,30460,154358,1377.6142784,57,0.89248
+"Zimbabwe","Mashonaland East",1983,31607,161781,2669.3865,107,1.65
+"Zimbabwe","Mashonaland East",1984,32699,169131,4549.6239,177,2.69
+"Zimbabwe","Mashonaland East",1985,33729,176455,7111.1365,271,4.03
+"Zimbabwe","Mashonaland East",1986,34747,184332,10433.1912,392,5.66
+"Zimbabwe","Mashonaland East",1987,35727,192270,14516.385,538,7.55
+"Zimbabwe","Mashonaland East",1988,36587,200022,19342.1274,711,9.67
+"Zimbabwe","Mashonaland East",1989,37340,207237,24723.3741,901,11.93
+"Zimbabwe","Mashonaland East",1990,37926,213808,30489.0208,1103,14.26
+"Zimbabwe","Mashonaland East",1991,38355,219794,36309.9688,1299,16.52
+"Zimbabwe","Mashonaland East",1992,38645,225507,42079.6062,1486,18.66
+"Zimbabwe","Mashonaland East",1993,38807,231238,47473.1614,1644,20.53
+"Zimbabwe","Mashonaland East",1994,38932,237087,52443.6444,1775,22.12
+"Zimbabwe","Mashonaland East",1995,39059,243590,56902.624,1871,23.36
+"Zimbabwe","Mashonaland East",1996,39160,250361,60737.5786,1933,24.26
+"Zimbabwe","Mashonaland East",1997,39179,257371,63879.4822,1959,24.82
+"Zimbabwe","Mashonaland East",1998,39084,264265,66251.2355,1959,25.07
+"Zimbabwe","Mashonaland East",1999,38816,270543,67743.9672,1932,25.04
+"Zimbabwe","Mashonaland East",2000,38317,275233,68285.3073,1889,24.81
+"Zimbabwe","Mashonaland East",2001,37623,279015,67995.9555,1813,24.37
+"Zimbabwe","Mashonaland East",2002,36892,282356,67116.0212,1717,23.77
+"Zimbabwe","Mashonaland East",2003,36249,285593,65857.7458,1521,23.06
+"Zimbabwe","Mashonaland East",2004,35673,288814,64376.6406,1412,22.29
+"Zimbabwe","Mashonaland East",2005,35101,291528,62765.9784,1325,21.53
+"Zimbabwe","Mashonaland East",2006,35685,294730,61716.462,1300,20.94
+"Zimbabwe","Mashonaland East",2007,38321,298174,60887.1308,1268,20.42
+"Zimbabwe","Mashonaland East",2008,39572,303022,60604.4,1168,20
+"Zimbabwe","Mashonaland East",2009,41173,310731,61276.1532,1084,19.72
+"Zimbabwe","Mashonaland East",2010,43264,321975,62688.5325,925,19.47
+"Zimbabwe","Mashonaland East",2011,45865,336658,65143.323,720,19.35
+"Zimbabwe","Mashonaland East",2012,48837,352755,67940.613,687,19.26
+"Zimbabwe","Mashonaland East",2013,51420,368814,70664.7624,575,19.16
+"Zimbabwe","Mashonaland East",2014,53929,384549,73064.31,431,19
+"Zimbabwe","Mashonaland East",2015,56260,399118,75034.184,568,18.8
+"Zimbabwe","Mashonaland East",2016,58382,413107,76713.9699,415,18.57
+"Zimbabwe","Mashonaland East",2017,60337,426730,77622.187,372,18.19
+"Zimbabwe","Mashonaland East",2018,62087,439739,78097.6464,350,17.76
+"Zimbabwe","Mashonaland East",2019,63567,451731,78420.5016,350,17.36
+"Zimbabwe","Mashonaland East",2020,64681,461993,78446.4114,339,16.98
+"Zimbabwe","Mashonaland West",1970,26216,107340,0,0,0
+"Zimbabwe","Mashonaland West",1971,26192,111194,0,0,0
+"Zimbabwe","Mashonaland West",1972,27131,115262,0,0,0
+"Zimbabwe","Mashonaland West",1973,28135,119496,0,0,0
+"Zimbabwe","Mashonaland West",1974,29111,123839,0,0,0
+"Zimbabwe","Mashonaland West",1975,30070,127948,0.0767688,3,6e-05
+"Zimbabwe","Mashonaland West",1976,30959,132105,0.1453155,2,0.00011
+"Zimbabwe","Mashonaland West",1977,31871,136430,0.300146,2,0.00022
+"Zimbabwe","Mashonaland West",1978,32739,141285,0.678168,2,0.00048
+"Zimbabwe","Mashonaland West",1979,33578,147069,1.6030521,2,0.00109
+"Zimbabwe","Mashonaland West",1980,34478,153808,3.8144384,3,0.00248
+"Zimbabwe","Mashonaland West",1981,35509,161992,9.0067552,3,0.00556
+"Zimbabwe","Mashonaland West",1982,36628,170350,39.265675,4,0.02305
+"Zimbabwe","Mashonaland West",1983,37643,178648,108.5465248,7,0.06076
+"Zimbabwe","Mashonaland West",1984,38295,186882,263.316738,13,0.1409
+"Zimbabwe","Mashonaland West",1985,38714,195124,592.6501252,25,0.30373
+"Zimbabwe","Mashonaland West",1986,39114,204393,1268.667351,50,0.6207
+"Zimbabwe","Mashonaland West",1987,39599,213975,2589.0975,96,1.21
+"Zimbabwe","Mashonaland West",1988,39986,223603,4896.9057,176,2.19
+"Zimbabwe","Mashonaland West",1989,40743,232864,8755.6864,310,3.76
+"Zimbabwe","Mashonaland West",1990,41346,241637,14643.2022,513,6.06
+"Zimbabwe","Mashonaland West",1991,41826,249971,22797.3552,800,9.12
+"Zimbabwe","Mashonaland West",1992,42204,258192,33074.3952,1163,12.81
+"Zimbabwe","Mashonaland West",1993,42465,266536,44937.9696,1587,16.86
+"Zimbabwe","Mashonaland West",1994,41643,275001,57585.2094,1991,20.94
+"Zimbabwe","Mashonaland West",1995,41827,284060,69566.294,2368,24.49
+"Zimbabwe","Mashonaland West",1996,42031,293213,80193.7555,2673,27.35
+"Zimbabwe","Mashonaland West",1997,42085,302363,88683.0679,2839,29.33
+"Zimbabwe","Mashonaland West",1998,41946,311038,94368.9292,2853,30.34
+"Zimbabwe","Mashonaland West",1999,42059,318552,97381.3464,2812,30.57
+"Zimbabwe","Mashonaland West",2000,41872,323798,97430.8182,2682,30.09
+"Zimbabwe","Mashonaland West",2001,41418,327532,95213.5524,2496,29.07
+"Zimbabwe","Mashonaland West",2002,40980,330371,91446.6928,2281,27.68
+"Zimbabwe","Mashonaland West",2003,40497,332792,86758.8744,1915,26.07
+"Zimbabwe","Mashonaland West",2004,40065,335213,81490.2803,1764,24.31
+"Zimbabwe","Mashonaland West",2005,40407,337146,75992.7084,1581,22.54
+"Zimbabwe","Mashonaland West",2006,41412,339532,70996.1412,1431,20.91
+"Zimbabwe","Mashonaland West",2007,44552,342633,66984.7515,1344,19.55
+"Zimbabwe","Mashonaland West",2008,47942,347423,64030.0589,1197,18.43
+"Zimbabwe","Mashonaland West",2009,51919,354877,62387.3766,1174,17.58
+"Zimbabwe","Mashonaland West",2010,55468,366213,61889.997,974,16.9
+"Zimbabwe","Mashonaland West",2011,57901,381445,62900.2805,642,16.49
+"Zimbabwe","Mashonaland West",2012,60716,398282,64521.684,605,16.2
+"Zimbabwe","Mashonaland West",2013,63592,415104,66167.5776,591,15.94
+"Zimbabwe","Mashonaland West",2014,66332,431819,67493.3097,329,15.63
+"Zimbabwe","Mashonaland West",2015,68828,447564,68387.7792,289,15.28
+"Zimbabwe","Mashonaland West",2016,71083,462706,68943.194,320,14.9
+"Zimbabwe","Mashonaland West",2017,73137,477681,69024.9045,295,14.45
+"Zimbabwe","Mashonaland West",2018,74951,492235,68765.2295,276,13.97
+"Zimbabwe","Mashonaland West",2019,76465,505868,68393.3536,273,13.52
+"Zimbabwe","Mashonaland West",2020,77606,518220,67783.176,262,13.08
+"Zimbabwe","Masvingo",1970,24219,88646,0,0,0
+"Zimbabwe","Masvingo",1971,23577,92284,0,0,0
+"Zimbabwe","Masvingo",1972,24653,96211,0,0,0
+"Zimbabwe","Masvingo",1973,25805,100318,0,0,0
+"Zimbabwe","Masvingo",1974,27023,104461,0,0,0
+"Zimbabwe","Masvingo",1975,28150,108183,9.3470112,4,0.00864
+"Zimbabwe","Masvingo",1976,29222,111772,21.4378696,4,0.01918
+"Zimbabwe","Masvingo",1977,30264,115361,48.7746308,5,0.04228
+"Zimbabwe","Masvingo",1978,31307,119400,102.30192,8,0.08568
+"Zimbabwe","Masvingo",1979,32285,124401,199.7009253,13,0.16053
+"Zimbabwe","Masvingo",1980,33409,130425,367.4463525,21,0.28173
+"Zimbabwe","Masvingo",1981,34698,138352,635.9626384,34,0.45967
+"Zimbabwe","Masvingo",1982,36127,146192,1608.112,83,1.1
+"Zimbabwe","Masvingo",1983,37280,153647,3072.94,152,2
+"Zimbabwe","Masvingo",1984,38002,160681,5157.8601,243,3.21
+"Zimbabwe","Masvingo",1985,38416,167379,7883.5509,358,4.71
+"Zimbabwe","Masvingo",1986,38927,176813,11245.3068,490,6.36
+"Zimbabwe","Masvingo",1987,39607,186529,15295.378,646,8.2
+"Zimbabwe","Masvingo",1988,39207,196190,19952.523,800,10.17
+"Zimbabwe","Masvingo",1989,39056,205344,24969.8304,961,12.16
+"Zimbabwe","Masvingo",1990,38575,213832,30043.396,1101,14.05
+"Zimbabwe","Masvingo",1991,37896,221742,34924.365,1213,15.75
+"Zimbabwe","Masvingo",1992,37206,229485,39655.008,1306,17.28
+"Zimbabwe","Masvingo",1993,36337,237438,44021.0052,1364,18.54
+"Zimbabwe","Masvingo",1994,35551,245644,48072.5308,1405,19.57
+"Zimbabwe","Masvingo",1995,35882,254802,51724.806,1456,20.3
+"Zimbabwe","Masvingo",1996,36197,264385,54939.203,1489,20.78
+"Zimbabwe","Masvingo",1997,36411,274375,57618.75,1494,21
+"Zimbabwe","Masvingo",1998,36491,284178,59620.5444,1482,20.98
+"Zimbabwe","Masvingo",1999,38910,292964,61053.6976,1567,20.84
+"Zimbabwe","Masvingo",2000,41056,299301,61596.1458,1635,20.58
+"Zimbabwe","Masvingo",2001,43072,304112,61400.2128,1678,20.19
+"Zimbabwe","Masvingo",2002,44948,308085,60661.9365,1694,19.69
+"Zimbabwe","Masvingo",2003,46981,311226,59475.2886,1672,19.11
+"Zimbabwe","Masvingo",2004,49123,313819,58025.1331,1653,18.49
+"Zimbabwe","Masvingo",2005,49556,315008,56354.9312,1569,17.89
+"Zimbabwe","Masvingo",2006,48303,315818,54762.8412,1425,17.34
+"Zimbabwe","Masvingo",2007,49434,316742,53877.8142,1358,17.01
+"Zimbabwe","Masvingo",2008,48767,319105,53481.998,1105,16.76
+"Zimbabwe","Masvingo",2009,48435,324996,53949.336,1091,16.6
+"Zimbabwe","Masvingo",2010,48627,335796,55137.7032,841,16.42
+"Zimbabwe","Masvingo",2011,49273,351331,57302.0861,769,16.31
+"Zimbabwe","Masvingo",2012,50105,368926,59802.9046,469,16.21
+"Zimbabwe","Masvingo",2013,52506,386583,62162.5464,435,16.08
+"Zimbabwe","Masvingo",2014,54808,405172,64300.7964,351,15.87
+"Zimbabwe","Masvingo",2015,56968,423459,66017.2581,277,15.59
+"Zimbabwe","Masvingo",2016,58957,441874,67341.5976,311,15.24
+"Zimbabwe","Masvingo",2017,60811,461245,68264.26,282,14.8
+"Zimbabwe","Masvingo",2018,62517,481235,68912.852,263,14.32
+"Zimbabwe","Masvingo",2019,64088,501301,69530.4487,261,13.87
+"Zimbabwe","Masvingo",2020,65467,519615,69888.2175,250,13.45
+"Zimbabwe","Matabeleland North",1970,12671,46746,0,0,0
+"Zimbabwe","Matabeleland North",1971,12655,48829,0,0,0
+"Zimbabwe","Matabeleland North",1972,13225,51175,0,0,0
+"Zimbabwe","Matabeleland North",1973,13877,53686,0,0,0
+"Zimbabwe","Matabeleland North",1974,14557,56229,0,0,0
+"Zimbabwe","Matabeleland North",1975,15246,58526,4.8108372,4,0.00822
+"Zimbabwe","Matabeleland North",1976,15893,60712,9.6592792,3,0.01591
+"Zimbabwe","Matabeleland North",1977,16564,62865,19.840194,4,0.03156
+"Zimbabwe","Matabeleland North",1978,17231,65240,39.620252,5,0.06073
+"Zimbabwe","Matabeleland North",1979,17904,68127,76.6769385,7,0.11255
+"Zimbabwe","Matabeleland North",1980,18620,71575,143.4720875,10,0.20045
+"Zimbabwe","Matabeleland North",1981,19420,75658,259.847401,16,0.34345
+"Zimbabwe","Matabeleland North",1982,20268,79897,730.0748169,41,0.91377
+"Zimbabwe","Matabeleland North",1983,21004,84136,1506.0344,79,1.79
+"Zimbabwe","Matabeleland North",1984,21561,88359,2721.4572,137,3.08
+"Zimbabwe","Matabeleland North",1985,21916,92596,4490.906,217,4.85
+"Zimbabwe","Matabeleland North",1986,22254,97370,6893.796,324,7.08
+"Zimbabwe","Matabeleland North",1987,22632,102314,9996.0778,460,9.77
+"Zimbabwe","Matabeleland North",1988,23033,107256,13793.1216,628,12.86
+"Zimbabwe","Matabeleland North",1989,23657,111937,18055.4381,827,16.13
+"Zimbabwe","Matabeleland North",1990,24164,116275,22534.095,1035,19.38
+"Zimbabwe","Matabeleland North",1991,24618,120302,26995.7688,1244,22.44
+"Zimbabwe","Matabeleland North",1992,24969,124242,31209.5904,1431,25.12
+"Zimbabwe","Matabeleland North",1993,25260,128273,35044.1836,1589,27.32
+"Zimbabwe","Matabeleland North",1994,23920,132422,38322.9268,1591,28.94
+"Zimbabwe","Matabeleland North",1995,23220,137048,41141.8096,1588,30.02
+"Zimbabwe","Matabeleland North",1996,22505,141849,43391.6091,1546,30.59
+"Zimbabwe","Matabeleland North",1997,21680,146807,45040.3876,1465,30.68
+"Zimbabwe","Matabeleland North",1998,20661,151640,46068.232,1358,30.38
+"Zimbabwe","Matabeleland North",1999,21188,155958,46428.6966,1347,29.77
+"Zimbabwe","Matabeleland North",2000,21575,158992,46028.184,1324,28.95
+"Zimbabwe","Matabeleland North",2001,21783,161256,45054.9264,1275,27.94
+"Zimbabwe","Matabeleland North",2002,22025,163111,43795.3035,1224,26.85
+"Zimbabwe","Matabeleland North",2003,22340,164827,42327.5736,1143,25.68
+"Zimbabwe","Matabeleland North",2004,22663,166567,40775.6016,1100,24.48
+"Zimbabwe","Matabeleland North",2005,22654,167909,39122.797,1006,23.3
+"Zimbabwe","Matabeleland North",2006,22276,169443,37667.1789,910,22.23
+"Zimbabwe","Matabeleland North",2007,23011,171397,36678.958,838,21.4
+"Zimbabwe","Matabeleland North",2008,23429,174523,36161.1656,763,20.72
+"Zimbabwe","Matabeleland North",2009,24053,179219,36291.8475,708,20.25
+"Zimbabwe","Matabeleland North",2010,24963,186261,36972.8085,550,19.85
+"Zimbabwe","Matabeleland North",2011,26175,195568,38389.9984,324,19.63
+"Zimbabwe","Matabeleland North",2012,27575,205620,39993.09,293,19.45
+"Zimbabwe","Matabeleland North",2013,29144,215270,41525.583,329,19.29
+"Zimbabwe","Matabeleland North",2014,30620,225060,42873.93,200,19.05
+"Zimbabwe","Matabeleland North",2015,31935,234348,43916.8152,197,18.74
+"Zimbabwe","Matabeleland North",2016,33089,243592,44747.8504,203,18.37
+"Zimbabwe","Matabeleland North",2017,34105,252892,45318.2464,188,17.92
+"Zimbabwe","Matabeleland North",2018,34949,262066,45678.1038,177,17.43
+"Zimbabwe","Matabeleland North",2019,35621,270796,45899.922,175,16.95
+"Zimbabwe","Matabeleland North",2020,36102,278413,45938.145,167,16.5
+"Zimbabwe","Matabeleland South",1970,10564,47053,0,0,0
+"Zimbabwe","Matabeleland South",1971,10551,49088,0,0,0
+"Zimbabwe","Matabeleland South",1972,11034,51341,0,0,0
+"Zimbabwe","Matabeleland South",1973,11569,53755,0,0,0
+"Zimbabwe","Matabeleland South",1974,12159,56254,0,0,0
+"Zimbabwe","Matabeleland South",1975,12748,58618,0.0117236,3,2e-05
+"Zimbabwe","Matabeleland South",1976,13326,60972,0.0182916,2,3e-05
+"Zimbabwe","Matabeleland South",1977,13930,63366,0.031683,2,5e-05
+"Zimbabwe","Matabeleland South",1978,14522,65988,0.0527904,2,8e-05
+"Zimbabwe","Matabeleland South",1979,15093,69046,0.103569,2,0.00015
+"Zimbabwe","Matabeleland South",1980,15709,72540,0.261144,2,0.00036
+"Zimbabwe","Matabeleland South",1981,16335,76332,0.725154,2,0.00095
+"Zimbabwe","Matabeleland South",1982,17000,80245,4.092495,3,0.0051
+"Zimbabwe","Matabeleland South",1983,17610,84154,14.3650878,3,0.01707
+"Zimbabwe","Matabeleland South",1984,18001,88048,43.891928,4,0.04985
+"Zimbabwe","Matabeleland South",1985,18286,91963,123.8281795,7,0.13465
+"Zimbabwe","Matabeleland South",1986,18475,95753,321.6822035,14,0.33595
+"Zimbabwe","Matabeleland South",1987,18634,99718,779.645183,30,0.78185
+"Zimbabwe","Matabeleland South",1988,18951,103734,1742.7312,64,1.68
+"Zimbabwe","Matabeleland South",1989,19458,107625,3583.9125,131,3.33
+"Zimbabwe","Matabeleland South",1990,19894,111343,6691.7143,245,6.01
+"Zimbabwe","Matabeleland South",1991,20239,114923,11354.3924,423,9.88
+"Zimbabwe","Matabeleland South",1992,20512,118538,17436.9398,666,14.71
+"Zimbabwe","Matabeleland South",1993,20753,122304,24436.3392,960,19.98
+"Zimbabwe","Matabeleland South",1994,20588,126199,31436.1709,1233,24.91
+"Zimbabwe","Matabeleland South",1995,21010,130466,37691.6274,1487,28.89
+"Zimbabwe","Matabeleland South",1996,21452,134798,42704.0064,1661,31.68
+"Zimbabwe","Matabeleland South",1997,21878,139131,46108.0134,1716,33.14
+"Zimbabwe","Matabeleland South",1998,22251,143204,47858.7768,1682,33.42
+"Zimbabwe","Matabeleland South",1999,21957,146629,48167.6265,1570,32.85
+"Zimbabwe","Matabeleland South",2000,21538,148813,47129.0771,1441,31.67
+"Zimbabwe","Matabeleland South",2001,20988,150151,45270.5265,1308,30.15
+"Zimbabwe","Matabeleland South",2002,20359,150955,43007.0795,1176,28.49
+"Zimbabwe","Matabeleland South",2003,19818,151568,40650.5376,1033,26.82
+"Zimbabwe","Matabeleland South",2004,19316,152196,38505.588,956,25.3
+"Zimbabwe","Matabeleland South",2005,19018,152550,36657.765,858,24.03
+"Zimbabwe","Matabeleland South",2006,18879,153043,35307.0201,788,23.07
+"Zimbabwe","Matabeleland South",2007,19210,154073,35036.2002,765,22.74
+"Zimbabwe","Matabeleland South",2008,19650,156065,35442.3615,641,22.71
+"Zimbabwe","Matabeleland South",2009,20281,159619,36728.3319,663,23.01
+"Zimbabwe","Matabeleland South",2010,21177,165374,38680.9786,639,23.39
+"Zimbabwe","Matabeleland South",2011,22357,173262,41340.3132,428,23.86
+"Zimbabwe","Matabeleland South",2012,23731,182159,44228.2052,447,24.28
+"Zimbabwe","Matabeleland South",2013,25103,191257,47049.222,434,24.6
+"Zimbabwe","Matabeleland South",2014,26418,200158,49759.2788,384,24.86
+"Zimbabwe","Matabeleland South",2015,27622,208396,52182.3584,395,25.04
+"Zimbabwe","Matabeleland South",2016,28730,216434,54389.8642,369,25.13
+"Zimbabwe","Matabeleland South",2017,29770,224221,55875.8732,325,24.92
+"Zimbabwe","Matabeleland South",2018,30723,231614,56977.044,308,24.6
+"Zimbabwe","Matabeleland South",2019,31537,238381,58021.9354,313,24.34
+"Zimbabwe","Matabeleland South",2020,32149,244212,58806.2496,308,24.08
+"Zimbabwe","Midlands",1970,28430,116260,0,0,0
+"Zimbabwe","Midlands",1971,28400,120790,0,0,0
+"Zimbabwe","Midlands",1972,29569,125606,0,0,0
+"Zimbabwe","Midlands",1973,30802,130630,0,0,0
+"Zimbabwe","Midlands",1974,32105,135757,0,0,0
+"Zimbabwe","Midlands",1975,33312,140544,8.994816,4,0.0064
+"Zimbabwe","Midlands",1976,34527,145320,20.99874,3,0.01445
+"Zimbabwe","Midlands",1977,35681,150228,49.5451944,5,0.03298
+"Zimbabwe","Midlands",1978,36833,155736,109.8094536,8,0.07051
+"Zimbabwe","Midlands",1979,37959,162363,228.7045218,13,0.14086
+"Zimbabwe","Midlands",1980,39163,170161,447.8807681,23,0.26321
+"Zimbabwe","Midlands",1981,40514,179577,826.592931,39,0.4603
+"Zimbabwe","Midlands",1982,41955,189276,2309.1672,106,1.22
+"Zimbabwe","Midlands",1983,43204,198926,4615.0832,205,2.32
+"Zimbabwe","Midlands",1984,44077,208464,7900.7856,339,3.79
+"Zimbabwe","Midlands",1985,44593,217927,12225.7047,505,5.61
+"Zimbabwe","Midlands",1986,45024,228077,17447.8905,694,7.65
+"Zimbabwe","Midlands",1987,45568,238469,23393.8089,903,9.81
+"Zimbabwe","Midlands",1988,45426,248758,29801.2084,1103,11.98
+"Zimbabwe","Midlands",1989,45619,258489,36395.2512,1307,14.08
+"Zimbabwe","Midlands",1990,45549,267502,42693.3192,1480,15.96
+"Zimbabwe","Midlands",1991,45332,275920,48589.512,1625,17.61
+"Zimbabwe","Midlands",1992,44838,284143,53987.17,1728,19
+"Zimbabwe","Midlands",1993,44180,292535,58887.2955,1800,20.13
+"Zimbabwe","Midlands",1994,43373,301156,63242.76,1832,21
+"Zimbabwe","Midlands",1995,43848,310678,67137.5158,1887,21.61
+"Zimbabwe","Midlands",1996,44335,320572,70525.84,1923,22
+"Zimbabwe","Midlands",1997,44749,330807,73571.4768,1948,22.24
+"Zimbabwe","Midlands",1998,45031,340843,76076.1576,1954,22.32
+"Zimbabwe","Midlands",1999,46226,349901,77782.9923,1989,22.23
+"Zimbabwe","Midlands",2000,47279,356570,78552.371,2016,22.03
+"Zimbabwe","Midlands",2001,47981,361705,78562.326,2012,21.72
+"Zimbabwe","Midlands",2002,48637,365973,77769.2625,1972,21.25
+"Zimbabwe","Midlands",2003,49399,369594,76542.9174,1893,20.71
+"Zimbabwe","Midlands",2004,50228,372902,74804.1412,1858,20.06
+"Zimbabwe","Midlands",2005,50276,375166,72744.6874,1746,19.39
+"Zimbabwe","Midlands",2006,49465,377537,70863.6949,1604,18.77
+"Zimbabwe","Midlands",2007,50177,380043,69319.8432,1565,18.24
+"Zimbabwe","Midlands",2008,50985,384064,68286.5792,1456,17.78
+"Zimbabwe","Midlands",2009,52122,391472,68233.5696,1326,17.43
+"Zimbabwe","Midlands",2010,53793,403701,69073.2411,1007,17.11
+"Zimbabwe","Midlands",2011,56031,420671,71177.5332,789,16.92
+"Zimbabwe","Midlands",2012,58637,439693,73780.4854,567,16.78
+"Zimbabwe","Midlands",2013,61250,458811,76300.2693,590,16.63
+"Zimbabwe","Midlands",2014,63738,478180,78517.156,480,16.42
+"Zimbabwe","Midlands",2015,66039,496786,80330.2962,484,16.17
+"Zimbabwe","Midlands",2016,68165,515217,81816.4596,377,15.88
+"Zimbabwe","Midlands",2017,70162,533875,82537.075,340,15.46
+"Zimbabwe","Midlands",2018,71994,552378,82911.9378,319,15.01
+"Zimbabwe","Midlands",2019,73619,570201,83078.2857,316,14.57
+"Zimbabwe","Midlands",2020,74956,586089,82931.5935,304,14.15

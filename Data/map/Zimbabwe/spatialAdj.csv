@@ -1,0 +1,11 @@
+"","manicaland","mashonaland central","mashonaland east","mashonaland west","matabeleland north","matabeleland south","midlands","masvingo","harare","bulwayo"
+"manicaland",0,0,1,0,0,0,0,1,0,0
+"mashonaland central",0,0,1,1,0,0,0,0,1,0
+"mashonaland east",1,1,0,1,0,0,1,1,1,0
+"mashonaland west",0,1,1,0,1,0,1,0,1,0
+"matabeleland north",0,0,0,1,0,1,1,0,0,1
+"matabeleland south",0,0,0,0,1,0,1,1,0,1
+"midlands",0,0,1,1,1,1,0,1,0,0
+"masvingo",1,0,1,0,0,1,1,0,0,0
+"harare",0,1,1,1,0,0,0,0,0,0
+"bulwayo",0,0,0,0,1,1,0,0,0,0

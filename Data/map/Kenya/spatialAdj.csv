@@ -1,0 +1,9 @@
+"","nairobi","central","coast","eastern","nyanza","rift valley","western","northeastern"
+"nairobi",0,1,0,1,0,1,0,0
+"central",1,0,0,1,0,1,0,0
+"coast",0,0,0,1,0,1,0,1
+"eastern",1,1,1,0,0,1,0,1
+"nyanza",0,0,0,0,0,1,1,0
+"rift valley",1,1,1,1,1,0,1,0
+"western",0,0,0,0,1,1,0,0
+"northeastern",0,0,1,1,0,0,0,0
