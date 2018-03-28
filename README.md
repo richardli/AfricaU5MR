@@ -1,4 +1,4 @@
-# ChildMortality
+# AfricaU5MR
 This is the repository for Child Mortality project. 
 
 ## Structure of the repository
@@ -33,6 +33,6 @@ This is the main working folder containing all the codes, results, tables, and f
     * add_country_script.R: to be removed?
     * CombinedRegionChange.R: to combine some regions in several countries (used when calling CombinedSvyGLM.R)
 
-### HelperFunctions.R
+### HelperFunctions
 This folder contains the codes to fit INLA models. They are now incorporated into the SUMMER package already.
 
