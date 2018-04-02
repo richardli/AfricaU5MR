@@ -10,7 +10,7 @@
 module load R
 Rscript run.R $SLURM_ARRAY_TASK_ID > log/+C$SLURM_ARRAY_TASK_ID
 
-# sbatch --array=2-30 run.sbatch
+# sbatch --array=1-35 run.sbatch
 # sbatch --array=32-35 run.sbatch
 # sbatch --array=1 run.sbatch
 # sbatch --array=31 run.sbatch

@@ -7,23 +7,23 @@ countryname <- countries[as.numeric(commandArgs(trailingOnly = TRUE)[1])]
 print(countryname)
 
 
-# start_time <- Sys.time()
-# source("Run.R")
-# end_time <- Sys.time()
-# t1 <- end_time - start_time
-# print(end_time - start_time)
+start_time <- Sys.time()
+source("Run.R")
+end_time <- Sys.time()
+t1 <- end_time - start_time
+print(end_time - start_time)
 
-# start_time <- Sys.time()
-# source("Diag.R")
-# end_time <- Sys.time()
-# t2 <- end_time - start_time
-# print(end_time - start_time)
+start_time <- Sys.time()
+source("Diag.R")
+end_time <- Sys.time()
+t2 <- end_time - start_time
+print(end_time - start_time)
 
-# start_time <- Sys.time()
-# source("Plot.R")
-# end_time <- Sys.time()
-# t3 <- end_time - start_time
-# print(end_time - start_time)
+start_time <- Sys.time()
+source("Plot.R")
+end_time <- Sys.time()
+t3 <- end_time - start_time
+print(end_time - start_time)
 
 start_time <- Sys.time()
 source("CrossValidation.R")
@@ -31,9 +31,9 @@ end_time <- Sys.time()
 t4 <- end_time - start_time
 print(end_time - start_time)
 
-# time <- c(t1, t2, t3, t4)
-# names(time) <- c("Fit", "Diag", "Plot", "CV")
-# write.csv(time, file = paste0("runscripts/time/", countryname, ".csv"))
+time <- c(t1, t2, t3, t4)
+names(time) <- c("Fit", "Diag", "Plot", "CV")
+write.csv(time, file = paste0("runscripts/time/", countryname, ".csv"))
 
 
 # Angola: 

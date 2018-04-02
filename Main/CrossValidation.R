@@ -110,7 +110,8 @@ for(yy in 1:length(years)){
 	    which <- intersect(which(results$region == final_name_ordered[rr]), which(results$year == years[yy]))
 	    which2 <- intersect(which(data$region == final_name_ordered[rr]), which(data$year == years[yy]))
  		results$med[which] <- mean(tmp)
-	    results$med.logit[which] <- mean(tmp.logit)	    results$upper[which] <- quantile(tmp, .975)
+	    results$med.logit[which] <- mean(tmp.logit)	  
+	    results$upper[which] <- quantile(tmp, .975)
 	    results$lower[which] <- quantile(tmp, .025)
 	    results$compare[which]<- data[which2, "u5m"]
 	    results$compare.lower[which]<- (data[which2, "lower"])

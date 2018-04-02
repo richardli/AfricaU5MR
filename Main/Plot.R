@@ -7,7 +7,7 @@ if(FALSE){
   	source("Plot.R")
   }
   end_time <- Sys.time()
-  print(end_time - start_time) # ~1hr 
+  print(end_time - start_time) # 5 min
 }
 
 
