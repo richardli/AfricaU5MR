@@ -5,3 +5,11 @@ Main/Figures
 .RData
 .Rhistory
 .csv
+build_files.sh
+Africa_all0.rda
+Africa_all.rda
+*.fdb_latexmk
+*.out
+*.fls
+*.gz
+*.toc

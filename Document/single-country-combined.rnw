@@ -1,0 +1,23 @@
+% \subsubsection{Summary of DHS surveys}
+<<Sexpr{paste0(countryname, "-0")}, messages=FALSE, child='single-country-1.rnw'>>=
+@
+DHS surveys were conducted in \Sexpr{countryname3} in \Sexpr{years.out.text}
+% \Sexpr{years.out[1:(length(years.out)-1)]}, and \Sexpr{years.out[length(years.out)]}. 
+
+We fit both the RW2 only model to the combined national data, and compare the time trend at national level with the estimates produced by the UN and IHME in Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+2}}. We then adjusted the combined national data to the UN estimates of U5MR, and refit the models on the benchmarked data. 
+<<Sexpr{paste0(countryname, "-3")}, messages=FALSE, child='single-country-3.rnw'>>=
+@
+
+We fit the RW2 model to the benchmarked data in each area. 
+% The proportions of the explained variation is summarized in Table~\ref{tab:\Sexpr{paste0(countryname, "-var")}}. 
+We compare the results in Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+3}} to \ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+7}}.
+Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+3}} compares the smoothed estimates against the direct estimates. Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+4}} and Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+5}} show the posterior median estimates of U5MR in each region over time and the reductions from 1990 period respectively.
+Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+6}} shows the smoothed estimates by region over time and Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+7}} compares the smoothed estimates with direct estimates from each survey for each region over time.
+
+<<Sexpr{paste0(countryname, "-2")}, messages=FALSE, child='single-country-2.rnw'>>=
+@
+% \subsubsection{National model results}
+We further assess the RW2 model by holding out some observations, and compare the projections to the direct estimates in these holdout observations. Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+8}} compares the predicted estimates for the out-of-sample observations  with the direct estimates by holding out observations from each area in each time period.  Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+9}} compares the histogram of the bias rescaled by the total variance in the cross validation studies. Figure~\ref{fig:unnamed-chunk-\Sexpr{country_count*nchunk+10}} compares the rescaled bias by region and time periods.
+
+<<Sexpr{paste0(countryname, "-2")}, messages=FALSE, child='single-country-4.rnw'>>=
+@

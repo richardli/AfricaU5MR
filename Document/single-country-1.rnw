@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Summary 
+<< echo=FALSE, results='asis'>>=
+table_count <- table_count + 1
+library(knitr)
+library(spdep)
+library(maptools)
+library(gpclib)
+library(plyr)
+library(INLA)
+library(ggplot2)
+library(RColorBrewer)
+library(lattice)
+library(xlsx)
+library(maptools)
+library(RColorBrewer)
+library(classInt)
+library(xtable)
+expit<-function(x){
+    exp(x)/(1+exp(x))
+}
+load(paste0("../Main/Fitted/", countryname, "-yearly.rda"))
+
+years <- names(out$results.rw2)
+n.years <- length(years)
+n.area <- dim(out$geo)[1]
+areasCap <- out$geo@data$DHSREGEN
+if(is.null(areasCap)){
+ areasCap <- out$geo@data$NAME_final
+}
+areas.smooth <- rownames(out$results.rw2[[1]])
+areas.ht <- unique(out$data.HT$region)
+country <- out$countryname
+surv.years <- unique(out$data.HT$years)
+n.survey <- max(out$data.HT$survey)
+surveys <- unique(out$data.HT$survey.label)
+info <- read.csv(paste0("../CountryMain/CountryInfo/", countryname, ".csv"))
+years.out <- as.numeric(gsub("DHS ", "", info[,2]))
+if(sum(!is.na(years.out)) == 0) years.out <- as.numeric(gsub("DHS", "", info[,2]))
+years.out <- years.out[!is.na(years.out)]
+regions.out <- info[,3]
+regions.out <- regions.out[regions.out != ""]
+regions.num <- length(regions.out)
+countryname2 <- gsub(" ", "", countryname)
+if(length(years.out) > 1){
+	years.out.text <- paste0(years.out, c(rep(",",length(years.out)-2), ", and", "."), collapse=" ")	
+}else{
+	years.out.text <- paste0(years.out, ".")
+}
+if(countryname == "Cote_dIvoire"){
+	countryname3 <- "Côte d'Ivoire"
+}else{
+	countryname3 <- countryname
+}
+
+@
+
