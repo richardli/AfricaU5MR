@@ -256,7 +256,7 @@ write.csv(out2, file = "Tables/PeriodEstimatesAll.csv", row.names = FALSE)
 
 
 ####################
-library(Hmisc)
+# library(Hmisc)
 tab <- out1
 tab <- tab[!is.na(tab$Median), ]
 tab$Region <- gsub(".*:","",tab$Region)
