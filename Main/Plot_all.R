@@ -417,7 +417,7 @@ for(type in types){
   basecolor2 <- c(base_l[1:(ratio * mult)], 
                 base_u[-(1:((1 - ratio) * mult))])
   # image(matrix(1:length(basecolor2)), col = basecolor2)
-  sc <- scale_fill_gradientn(colors = basecolor2, limit = c(min, max), breaks = breaks, name = "Deduction")
+  sc <- scale_fill_gradientn(colors = basecolor2, limit = c(min, max), breaks = breaks, name = "Reduction")
   
   
   if(type == 1){
