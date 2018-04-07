@@ -6,19 +6,19 @@
 % @
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Plot7
-<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = "Out-of-sample predictions along with direct estimates in the cross validation study where data from one region in each time period is held out and predicted using the rest of the data.">>=
+<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0(countryname3, ": Out-of-sample predictions along with direct estimates in the cross validation study where data from one region in each time period is held out and predicted using the rest of the data.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/CV_byYearRegion_withError_", countryname2, ".pdf")) 
 @
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Plot8
-<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = "Histogram and QQ-plot of the rescaled difference between the smoothed estimates and the direct estimates in the cross validation study. The differences between the two estimates are rescaled by the square root of the total variance of the two estimates.">>=
+<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0(countryname3, ": Histogram and QQ-plot of the rescaled difference between the smoothed estimates and the direct estimates in the cross validation study. The differences between the two estimates are rescaled by the square root of the total variance of the two estimates.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/CVbias", countryname2, ".pdf")) 
 @
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Plot9
-<< echo=FALSE, out.width = ".7\\textwidth", fig.width = 12, fig.height = 6, fig.cap = "Line plot of the difference between smoothed estimates and the direct estimates in the cross validation study. The differences between the two estimates are rescaled by the square root of the total variance of the two estimates.">>=
+<< echo=FALSE, out.width = ".7\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0(countryname3, ": Line plot of the difference between smoothed estimates and the direct estimates in the cross validation study. The differences between the two estimates are rescaled by the square root of the total variance of the two estimates.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/CVbiasbyRegion", countryname2, ".pdf")) 
 @

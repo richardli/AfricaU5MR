@@ -91,6 +91,8 @@ plot.res.national$is.yearly <- !(plot.res.national$Year %in% years)
 # add national estimates
 HT.all <- NULL
 HT.national <- NULL
+adjust.ratio <- matrix(NA, length(countries), length(years))
+colnames(adjust.ratio) <- years
 for(CIndex in 1:length(countries)){
     countryname <- countries[CIndex]
     if(!file.exists(paste0("Fitted/", countryname, "-yearly.rda"))){
@@ -100,7 +102,15 @@ for(CIndex in 1:length(countries)){
     load(paste0("Fitted/", countryname, "-yearly.rda"))
     tmp1 <- out$data.HT.combined.national.unadj
     tmp2 <- out$data.HT.combined
-    
+
+    # ratio of benchmarking adjustment (unadj / adj)
+    tmp3 <- out$data.HT.combined.national
+    ratio <- merge(tmp1[, c("years", "u5m")],
+                   tmp3[, c("years", "u5m")], by="years")
+    tmp4 <- ratio[,2]/ratio[,3]
+
+    adjust.ratio[CIndex, ] <- tmp4[match(years, as.character(ratio$years))]
+
     tmp1 <- tmp1[, c("region", "years", "u5m", "lower", "upper")]
     tmp2 <- tmp2[, c("region", "years", "u5m", "lower", "upper")]
 
@@ -113,6 +123,16 @@ for(CIndex in 1:length(countries)){
     cat(".")
 }
 
+# save the table of adjustment
+tab0 <- data.frame(country = countries)
+tab0 <- cbind(tab0, adjust.ratio)
+tab0$mean <- apply(tab0[,-1], 1, mean, na.rm=TRUE)
+tab0[,1] <- as.character(tab0[,1])
+ave <- apply(tab0[,-1], 2, mean, na.rm = TRUE)
+tab0 <- rbind(tab0, rep(NA, dim(tab0)[2]))
+tab0[dim(tab0)[1], -1] <- ave
+tab0[dim(tab0)[1], 1] <- "Average"
+print(xtable(tab0), include.rownames = F, file = "Tables/final_table_benchmark.tex")
 
 # add in UN and IHME yearly estimates
 UN <- read.csv("../Data/comparison/UNestimates_yearly_2018_03_14.csv")

@@ -107,20 +107,28 @@ nchunk <- 10
 \maketitle
 \tableofcontents
 \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
-\clearpage
-\section{Partitioning of variability}
+\subsection{Partitioning of variability}
 Table~\ref{tab:var} presents the partitioning of variability among the random effect terms in the space-time model.
+
 % latex table generated in R 3.4.3 by xtable 1.8-2 package
 % Mon Mar 19 16:02:34 2018
-\begin{table}[htb]
-\centering\small
-\begin{tabular}{lrrrrr}
-  \hline
+\small
+\begin{longtable}{lrrrrr}
+\caption{Variance component proportions for each country.} \label{tab:var} \\
+  \toprule
 country & RW2 ($\sigma^2_{\gamma_t}$)& ICAR($\sigma^2_{\phi_i}$) & IID space ($\sigma^2_{\theta_i}$) & IID time ($\sigma^2_{\alpha_t}$) & IID space time ($\sigma^2_{\delta_{it}}$) \\ 
-  \hline
-  Burkina Faso & 56.9\% & 30.9\% & 3\% & 0.6\% & 8.7\% \\ 
+  \midrule
+  \endfirsthead
+  \toprule
+country & RW2 ($\sigma^2_{\gamma_t}$)& ICAR($\sigma^2_{\phi_i}$) & IID space ($\sigma^2_{\theta_i}$) & IID time ($\sigma^2_{\alpha_t}$) & space time ($\sigma^2_{\delta_{it}}$) \\ 
+  \midrule
+  \endhead
+\multicolumn{3}{l}{{\footnotesize Continued on next page $\dots$}}
+\endfoot
+\endlastfoot
+ Angola & 6\% & 56.1\% & 1.4\% & 0.3\% & 36.3\% \\ 
   Benin & 65.5\% & 27.4\% & 2.7\% & 0.5\% & 3.8\% \\ 
-  Angola & 6\% & 56.1\% & 1.4\% & 0.3\% & 36.3\% \\ 
+  Burkina Faso & 56.9\% & 30.9\% & 3\% & 0.6\% & 8.7\% \\ 
   Burundi & 47.5\% & 35.6\% & 1.8\% & 0.4\% & 14.7\% \\ 
   Cameroon & 29.2\% & 65.3\% & 2.4\% & 0.4\% & 2.7\% \\ 
   Chad & 36.9\% & 41.4\% & 3.3\% & 0.6\% & 17.7\% \\ 
@@ -153,24 +161,29 @@ country & RW2 ($\sigma^2_{\gamma_t}$)& ICAR($\sigma^2_{\phi_i}$) & IID space ($\
   Uganda & 87.1\% & 8.7\% & 1.3\% & 0.3\% & 2.7\% \\ 
   Zambia & 75\% & 19.2\% & 1.6\% & 0.3\% & 3.8\% \\ 
   Zimbabwe & 45.2\% & 44.3\% & 2.3\% & 0.5\% & 7.7\% \\ 
-   \hline
-\end{tabular}
-\caption{Variance component proportions for each country.}
-\label{tab:var}
-\end{table}
+  \bottomrule
+\end{longtable}
 
 
-\clearpage
-\section{Summary of MDG goals}
+\subsection{Summary of MDG goals}
 Table~\ref{tab:mdg} summarizes the MDG4 status by country.
 % latex table generated in R 3.4.3 by xtable 1.8-2 package
 % Mon Mar 19 13:58:40 2018
-\begin{table}[ht]
-\centering
-\begin{tabular}{lllrl}
-  \hline
-Country & MDG4 achieved & Percent achieved & Median deduction & [Min, Max] \\ 
-   \hline
+% Mon Mar 19 13:58:40 2018
+\begin{longtable}{lcrrl}
+\caption{MDG4 goal achievement status for subnational regions.} \label{tab:mdg} \\
+\toprule
+Country & MDG4 achieved & Percent achieved & Median reduction & [Min, Max] \\ 
+\midrule
+\endfirsthead
+\toprule
+Country & MDG4 achieved & Percent achieved & Median reduction & [Min, Max] \\ 
+\midrule
+\endhead
+%\bottomrule
+{\footnotesize Continued on next page $\dots$}
+\endfoot
+\endlastfoot
 Angola & 1/18 & 5.56\% & 0.098 & [-0.63,0.88] \\ 
   Benin & 0/6 & 0\% & 0.465 & [ 0.38,0.57] \\ 
   Burkina Faso & 0/4 & 0\% & 0.599 & [ 0.41,0.65] \\ 
@@ -206,14 +219,11 @@ Angola & 1/18 & 5.56\% & 0.098 & [-0.63,0.88] \\
   Uganda & 3/4 & 75\% & 0.711 & [ 0.67,0.74] \\ 
   Zambia & 4/9 & 44.44\% & 0.658 & [ 0.60,0.76] \\ 
   Zimbabwe & 0/10 & 0\% & 0.032 & [-0.14,0.34] \\ 
-   \hline
-\end{tabular}
-\caption{MDG4 goal achievement status for subnational regions.}
-\label{tab:mdg}
-\end{table}
+   \bottomrule
+\end{longtable}
 
 
-Figure \ref{fig:c1-1} to \ref{fig:c1-4} show the projected U5MR and the projected deduction of U5MR at year of 2015 and the time period of 2015-2019 compared to that of 1990 respectively. In addition to the subnational model results, we include the comparison to the RW2 only model fitted to the combined national data, i.e., without subnational spatial smoothing, after benchmarking with UN estimates.  We also compare our results with UN (B3) estimates described in You et al. (2015) and IHME estimates based on GBD 2015 Child Mortality Collaborators (2016) for the comparisons with 2015 estimates.  
+Figures \ref{fig:c1-1} to \ref{fig:c1-4} show the projected U5MR and the projected reduction of U5MR at year of 2015 and the time period of 2015-2019 compared to that of 1990 respectively. In addition to the subnational model results, we include the comparison to the RW2 only model fitted to the combined national data, i.e., without subnational spatial smoothing, after benchmarking with UN estimates.  We also compare our results with UN (B3) estimates described in You et al. (2015) and IHME estimates based on GBD 2015 Child Mortality Collaborators (2016) for the comparisons with 2015 estimates.  
 
 \begin{figure}[htb]
 \includegraphics[width = .49\textwidth]{../Main/Figures/Africa_reduction_2015.jpeg}
@@ -253,8 +263,9 @@ Figure \ref{fig:c1-1} to \ref{fig:c1-4} show the projected U5MR and the projecte
 \end{figure}
 
 \clearpage
-\section{Cross validation summary}
-Figure~\ref{fig:var} shows the distribution of the cross validation bias combined for all the regions in the study. Table~\ref{tab:cv} summarizes the cross validation results for each country.
+\subsection{Cross validation summary}
+Figure~\ref{fig:var} shows the distribution of the cross validation bias combined for all the regions in the study. Table~\ref{tab:cv} summarizes the cross validation results for each country. In general, the scaled bias measure behaves as we would expect if the model is correct (approximately like a standard normal). The plots of the rescaled bias against time for individual countries also do not show systematic patterns, which would be evidence of missing trends. Finally, the coverage of our 95\% interval estimates is generally good (averaging 94\%).
+
 
 \begin{figure}[htb]
 \centering
@@ -268,57 +279,106 @@ Figure~\ref{fig:var} shows the distribution of the cross validation bias combine
 % Tue Mar 20 11:11:39 2018
 \begin{table}[ht]
 \centering
-\begin{tabular}{lrrr}
-  \hline
-  % & \multicolumn{3}{c}{by time periods}   & \multicolumn{3}{c}{by time periods and regions}  \\
-% \cmidrule{2-4} 
-% \cmidrule{5-7}
-Country & coverage & $Average bias$ & $sd(\mbox{bias})$ \\ 
-  \midrule
-Angola & 0.92 & 0.07 & 1.13 \\ 
-  Benin & 0.97 & 0.01 & 0.90 \\ 
-  Burkina Faso & 0.96 & 0.00 & 1.11 \\ 
-  Burundi & 0.90 & 0.03 & 1.22 \\ 
-  Cameroon & 0.97 & 0.02 & 0.89 \\ 
-  Chad & 0.93 & -0.00 & 1.05 \\ 
-  Comoros & 1.00 & -0.01 & 0.88 \\ 
-  Congo & 0.86 & 0.00 & 1.38 \\ 
-  C\^{o}te d'Ivoire & 0.92 & 0.02 & 1.07 \\ 
-  DRC & 0.99 & 0.01 & 1.04 \\ 
-  Egypt & 0.88 & -0.00 & 1.05 \\ 
-  Ethiopia & 0.92 & 0.02 & 1.10 \\ 
-  Gabon & 0.94 & -0.01 & 1.04 \\ 
-  Gambia & 0.98 & -0.00 & 0.95 \\ 
-  Ghana & 0.96 & 0.02 & 0.99 \\ 
-  Guinea & 0.91 & 0.01 & 0.99 \\ 
-  Kenya & 0.96 & 0.00 & 1.02 \\ 
-  Lesotho & 1.00 & 0.02 & 0.83 \\ 
-  Liberia & 1.00 & 0.00 & 0.85 \\ 
-  Madagascar & 0.89 & -0.01 & 1.18 \\ 
-  Malawi & 1.00 & 0.01 & 1.02 \\ 
-  Mali & 0.92 & 0.03 & 1.07 \\ 
-  Morocco & 0.97 & 0.00 & 1.03 \\ 
-  Mozambique & 0.91 & 0.02 & 1.11 \\ 
-  Namibia & 0.92 & 0.05 & 1.09 \\ 
-  Niger & 0.89 & -0.01 & 1.39 \\ 
-  Nigeria & 0.88 & 0.01 & 1.20 \\ 
-  Rwanda & 0.69 & -0.01 & 1.58 \\ 
-  Senegal & 0.88 & 0.01 & 1.22 \\ 
-  Sierra Leone & 0.96 & 0.01 & 1.02 \\ 
-  Tanzania & 0.92 & 0.02 & 1.11 \\ 
-  Togo & 0.95 & 0.01 & 1.11 \\ 
-  Uganda & 0.96 & 0.00 & 1.09 \\ 
-  Zambia & 0.89 & 0.02 & 1.16 \\ 
-  Zimbabwe & 0.95 & 0.02 & 0.94 \\ 
-  \hline
-  Average & 0.93 & 0.01 & 1.08 \\ 
-   \bottomrule
-\end{tabular}
 \caption{Coverage of the $95\%$ posterior credible interval for the logit of the direct estimates, mean and standard deviation of the rescaled bias under two cross validation schemes. The biases are scaled by the estimated standard deviation of the difference between the smoothed estimates and the direct estimates.}
 \label{tab:cv}
+\begin{tabular}{lrrr}
+  \toprule
+Country & coverage & Average bias & $sd(\mbox{bias})$ \\ 
+  \midrule
+Angola & 0.94 & 0.06 & 1.11 \\ 
+  Benin & 0.94 & 0.01 & 1.01 \\ 
+  Burkina Faso & 1.00 & 0.00 & 0.75 \\ 
+  Burundi & 0.93 & 0.00 & 1.17 \\ 
+  Cameroon & 1.00 & 0.01 & 0.81 \\ 
+  Chad & 0.96 & 0.02 & 0.99 \\ 
+  Comoros & 1.00 & -0.01 & 0.72 \\ 
+  Congo & 0.86 & -0.00 & 1.33 \\ 
+   C\^{o}te d'Ivoire & 0.96 & 0.05 & 0.97 \\ 
+  DRC & 0.91 & 0.01 & 1.04 \\ 
+  Egypt & 0.96 & -0.00 & 0.99 \\ 
+  Ethiopia & 0.92 & 0.02 & 1.06 \\ 
+  Gabon & 0.94 & -0.00 & 1.11 \\ 
+  Gambia & 0.98 & 0.01 & 0.99 \\ 
+  Ghana & 0.94 & 0.02 & 1.08 \\ 
+  Guinea & 0.97 & 0.02 & 0.88 \\ 
+  Kenya & 0.95 & 0.00 & 1.06 \\ 
+  Lesotho & 0.99 & 0.03 & 0.87 \\ 
+  Liberia & 1.00 & 0.02 & 0.79 \\ 
+  Madagascar & 0.89 & -0.01 & 1.18 \\ 
+  Malawi & 1.00 & 0.00 & 1.04 \\ 
+  Mali & 0.96 & 0.01 & 0.94 \\ 
+  Morocco & 0.97 & -0.00 & 1.02 \\ 
+  Mozambique & 0.95 & 0.03 & 1.06 \\ 
+  Namibia & 0.90 & 0.06 & 1.09 \\ 
+  Niger & 0.89 & -0.00 & 1.19 \\ 
+  Nigeria & 0.98 & 0.00 & 0.95 \\ 
+  Rwanda & 0.69 & -0.02 & 1.58 \\ 
+  Senegal & 0.91 & 0.02 & 1.14 \\ 
+  Sierra Leone & 0.96 & -0.01 & 0.97 \\ 
+  Tanzania & 0.90 & 0.03 & 1.24 \\ 
+  Togo & 0.95 & 0.01 & 1.00 \\ 
+  Uganda & 0.96 & -0.01 & 1.06 \\ 
+  Zambia & 0.89 & 0.02 & 1.14 \\ 
+  Zimbabwe & 0.90 & 0.03 & 1.12 \\ 
+  \hline
+  Average & 0.94 & 0.01 & 1.04 \\ 
+   \bottomrule
+\end{tabular}
 \end{table}
 
- 
+
+\subsection{Benchmarking Summary}
+ The final results were obtained with an additional adjustment step to account for the difference between the smoothed estimates and the estimates from the B3 model \cite{alkema:new:14} on the national-level. Table~\ref{tab:benchmark} summarizes the adjustment factor $\hat r_{t}$, the ratio of the unadjusted direct estimates divided by the direct estimates after benchmarking, in each country and five year periods. 
+
+\begin{table}[htbp]
+\centering
+\caption{Ratio of the posterior median U5MR from the national model to median U5MR from B3 model for each 5-year period in each country before benchmarking. Values greater than $1$ indicate the direct estimates are adjusted downwards after benchmarking, and vice versa.}
+\label{tab:benchmark}
+\begin{tabular}{lrrrrrrrr}
+  \hline
+ Country & 80-84 & 85-89 & 90-94 & 95-99 & 00-04 & 05-09 & 10-14 & Average \\ 
+  \toprule
+  Benin & 1.05 & 1.02 & 1.00 & 1.03 & 1.00 & 0.88 &  & 1.00 \\ 
+  Angola & 1.58 & 1.08 & 0.98 & 0.94 & 0.76 & 0.54 & 0.39 & 0.90 \\ 
+  Burkina Faso & 1.02 & 0.98 & 1.00 & 1.01 & 0.99 & 0.95 &  & 0.99 \\ 
+  Burundi & 1.07 & 1.05 & 1.12 & 1.27 & 1.26 & 0.89 &  & 1.11 \\ 
+  Cameroon & 0.94 & 0.95 & 1.01 & 0.97 & 1.02 & 1.09 & 1.06 & 1.01 \\ 
+  Chad & 0.93 & 0.86 & 0.90 & 1.00 & 0.97 & 0.96 & 0.86 & 0.92 \\ 
+  Comoros & 0.94 & 0.86 & 0.83 & 0.69 & 0.53 & 0.50 & 0.66 & 0.72 \\ 
+  Congo & 0.95 & 0.98 & 0.99 & 1.08 & 0.98 & 0.90 & 1.22 & 1.01 \\ 
+  Cote\_dIvoire & 0.83 & 0.92 & 0.91 & 0.94 & 0.98 & 0.98 & 0.94 & 0.93 \\ 
+  DRC & 0.81 & 0.83 & 0.98 & 1.01 & 0.95 & 0.94 & 0.96 & 0.93 \\ 
+  Egypt & 0.98 & 0.95 & 1.00 & 0.96 & 0.94 & 0.97 &  & 0.97 \\ 
+  Ethiopia & 1.01 & 0.99 & 1.04 & 0.99 & 1.00 & 1.03 & 1.13 & 1.03 \\ 
+  Gabon & 0.95 & 0.86 & 0.96 & 0.88 & 0.74 & 0.78 & 1.38 & 0.94 \\ 
+  Gambia & 0.77 & 0.67 & 0.67 & 0.70 & 0.76 & 0.73 & 0.67 & 0.71 \\ 
+  Ghana & 0.98 & 0.96 & 0.95 & 0.95 & 0.96 & 0.98 & 0.88 & 0.95 \\ 
+  Guinea & 0.98 & 0.94 & 0.98 & 0.97 & 1.01 & 1.10 & 1.02 & 1.00 \\ 
+  Kenya & 0.97 & 0.94 & 0.94 & 0.88 & 0.88 & 0.83 & 0.92 & 0.91 \\ 
+  Lesotho & 0.82 & 0.86 & 0.97 & 0.83 & 0.95 & 0.96 & 0.91 & 0.90 \\ 
+  Liberia & 0.95 & 0.96 & 1.03 & 0.97 & 0.96 & 0.94 & 1.13 & 0.99 \\ 
+  Madagascar & 1.04 & 1.02 & 0.97 & 0.96 & 0.94 & 0.93 &  & 0.98 \\ 
+  Malawi & 0.98 & 0.96 & 0.95 & 0.95 & 0.97 & 0.97 & 0.86 & 0.95 \\ 
+  Mali & 0.96 & 0.99 & 0.99 & 1.04 & 1.00 & 1.08 &  & 1.01 \\ 
+  Morocco & 0.95 & 0.95 & 0.97 & 1.02 & 0.97 &  &  & 0.97 \\ 
+  Mozambique & 0.98 & 0.94 & 0.94 & 0.95 & 0.92 & 0.85 & 0.94 & 0.93 \\ 
+  Namibia & 0.88 & 0.87 & 0.92 & 0.85 & 0.97 & 1.02 & 1.06 & 0.94 \\ 
+  Niger & 0.98 & 0.97 & 0.95 & 0.96 & 1.00 & 0.97 &  & 0.97 \\ 
+  Nigeria & 1.00 & 1.01 & 0.99 & 1.02 & 1.02 & 1.03 & 0.97 & 1.01 \\ 
+  Rwanda & 0.98 & 1.01 & 1.16 & 0.96 & 0.99 & 0.94 & 0.92 & 1.00 \\ 
+  Senegal & 0.99 & 0.96 & 0.97 & 0.98 & 0.93 & 0.93 & 1.00 & 0.97 \\ 
+  Sierra Leone & 1.01 & 1.06 & 0.95 & 0.91 & 0.98 & 1.02 & 0.92 & 0.98 \\ 
+  Tanzania & 0.95 & 0.95 & 1.00 & 1.00 & 0.99 & 1.10 & 1.24 & 1.03 \\ 
+  Togo & 1.04 & 1.01 & 1.06 & 1.03 & 1.00 & 0.99 & 1.01 & 1.02 \\ 
+  Uganda & 0.96 & 0.90 & 0.90 & 0.95 & 1.01 & 1.11 & 1.34 & 1.03 \\ 
+  Zambia & 0.99 & 0.97 & 0.96 & 0.90 & 0.91 & 0.85 & 0.96 & 0.93 \\ 
+  Zimbabwe & 0.97 & 0.92 & 0.84 & 0.74 & 0.72 & 0.86 &  & 0.84 \\ 
+   \hline
+  Average & 0.98 & 0.95 & 0.97 & 0.95 & 0.94 & 0.93 & 0.98 & 0.96 \\ 
+   \bottomrule
+\end{tabular}
+\end{table}
+
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -339,7 +399,7 @@ Angola & 0.92 & 0.07 & 1.13 \\
 % \end{figure}
 
 \clearpage
-\section{Complete results}
+\subsection{All Results by Country} \label{sec:resultsByCountry}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \subsection{Bangladesh}
 % <<Bangladesh, echo=FALSE, results='hide'>>=
@@ -379,7 +439,7 @@ Angola & 0.92 & 0.07 & 1.13 \\
 % <<Sexpr{paste0(countryname, "-run")}, messages=FALSE, child='single-country-combined.rnw'>>=
 % @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Angola}
+\subsubsection{Angola}
 <<Angola, echo=FALSE, results='hide'>>=
 countryname <- "Angola"
 country_count <- country_count + 1
@@ -389,7 +449,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Benin}
+\subsubsection{Benin}
 <<Benin, echo=FALSE, results='hide'>>=
 countryname <- "Benin"
 country_count <- country_count + 1
@@ -398,7 +458,7 @@ country_count <- country_count + 1
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Burkina Faso}
+\subsubsection{Burkina Faso}
 <<BurkinaFaso, echo=FALSE, results='hide'>>=
 countryname <- "Burkina Faso"
 country_count <- country_count + 1
@@ -407,7 +467,7 @@ country_count <- country_count + 1
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Burundi}
+\subsubsection{Burundi}
 <<Burundi, echo=FALSE, results='hide'>>=
 countryname <- "Burundi"
 country_count <- country_count + 1
@@ -416,7 +476,7 @@ country_count <- country_count + 1
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Cameroon}
+\subsubsection{Cameroon}
 <<Cameroon, echo=FALSE, results='hide'>>=
 countryname <- "Cameroon"
 country_count <- country_count + 1
@@ -426,7 +486,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Chad}
+\subsubsection{Chad}
 <<Chad, echo=FALSE, results='hide'>>=
 countryname <- "Chad"
 country_count <- country_count + 1
@@ -435,7 +495,7 @@ country_count <- country_count + 1
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Comoros}
+\subsubsection{Comoros}
 <<Comoros, echo=FALSE, results='hide'>>=
 countryname <- "Comoros"
 country_count <- country_count + 1
@@ -444,7 +504,7 @@ country_count <- country_count + 1
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Congo}
+\subsubsection{Congo}
 <<Congo, echo=FALSE, results='hide'>>=
 countryname <- "Congo"
 country_count <- country_count + 1
@@ -453,7 +513,7 @@ country_count <- country_count + 1
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{C\^{o}te d'Ivoire}
+\subsubsection{C\^{o}te d'Ivoire}
 <<Cote_dIvoire, echo=FALSE, results='hide'>>=
 countryname <- "Cote_dIvoire"
 country_count <- country_count + 1
@@ -464,7 +524,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{DRC}
+\subsubsection{DRC}
 <<DRC, echo=FALSE, results='hide'>>=
 countryname <- "DRC"
 country_count <- country_count + 1
@@ -474,7 +534,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Egypt}
+\subsubsection{Egypt}
 <<Egypt, echo=FALSE, results='hide'>>=
 countryname <- "Egypt"
 country_count <- country_count + 1
@@ -484,7 +544,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Ethiopia}
+\subsubsection{Ethiopia}
 <<Ethiopia, echo=FALSE, results='hide'>>=
 countryname <- "Ethiopia"
 country_count <- country_count + 1
@@ -494,7 +554,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Gabon}
+\subsubsection{Gabon}
 <<Gabon, echo=FALSE, results='hide'>>=
 countryname <- "Gabon"
 country_count <- country_count + 1
@@ -503,7 +563,7 @@ country_count <- country_count + 1
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Gambia}
+\subsubsection{Gambia}
 <<Gambia, echo=FALSE, results='hide'>>=
 countryname <- "Gambia"
 country_count <- country_count + 1
@@ -513,7 +573,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Ghana}
+\subsubsection{Ghana}
 <<Ghana, echo=FALSE, results='hide'>>=
 countryname <- "Ghana"
 country_count <- country_count + 1
@@ -523,7 +583,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Guinea}
+\subsubsection{Guinea}
 <<Guinea, echo=FALSE, results='hide'>>=
 countryname <- "Guinea"
 country_count <- country_count + 1
@@ -533,7 +593,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Kenya}
+\subsubsection{Kenya}
 <<Kenya, echo=FALSE, results='hide'>>=
 countryname <- "Kenya"
 country_count <- country_count + 1
@@ -543,7 +603,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Lesotho}
+\subsubsection{Lesotho}
 <<Lesotho, echo=FALSE, results='hide'>>=
 countryname <- "Lesotho"
 country_count <- country_count + 1
@@ -553,7 +613,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Liberia}
+\subsubsection{Liberia}
 <<Liberia, echo=FALSE, results='hide'>>=
 countryname <- "Liberia"
 country_count <- country_count + 1
@@ -563,7 +623,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Madagascar}
+\subsubsection{Madagascar}
 <<Madagascar, echo=FALSE, results='hide'>>=
 countryname <- "Madagascar"
 country_count <- country_count + 1
@@ -573,7 +633,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Malawi}
+\subsubsection{Malawi}
 <<Malawi, echo=FALSE, results='hide'>>=
 countryname <- "Malawi"
 country_count <- country_count + 1
@@ -583,7 +643,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Mali}
+\subsubsection{Mali}
 <<Mali, echo=FALSE, results='hide'>>=
 countryname <- "Mali"
 country_count <- country_count + 1
@@ -593,7 +653,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Morocco}
+\subsubsection{Morocco}
 <<Morocco, echo=FALSE, results='hide'>>=
 countryname <- "Morocco"
 country_count <- country_count + 1
@@ -603,7 +663,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Mozambique}
+\subsubsection{Mozambique}
 <<Mozambique, echo=FALSE, results='hide'>>=
 countryname <- "Mozambique"
 country_count <- country_count + 1
@@ -613,7 +673,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Namibia}
+\subsubsection{Namibia}
 <<Namibia, echo=FALSE, results='hide'>>=
 countryname <- "Namibia"
 country_count <- country_count + 1
@@ -623,7 +683,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Niger}
+\subsubsection{Niger}
 <<Niger, echo=FALSE, results='hide'>>=
 countryname <- "Niger"
 country_count <- country_count + 1
@@ -633,7 +693,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Nigeria}
+\subsubsection{Nigeria}
 <<Nigeria, echo=FALSE, results='hide'>>=
 countryname <- "Nigeria"
 country_count <- country_count + 1
@@ -643,7 +703,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Rwanda}
+\subsubsection{Rwanda}
 <<Rwanda, echo=FALSE, results='hide'>>=
 countryname <- "Rwanda"
 country_count <- country_count + 1
@@ -653,7 +713,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Senegal}
+\subsubsection{Senegal}
 <<Senegal, echo=FALSE, results='hide'>>=
 countryname <- "Senegal"
 country_count <- country_count + 1
@@ -663,7 +723,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Sierra Leone}
+\subsubsection{Sierra Leone}
 <<SierraLeone, echo=FALSE, results='hide'>>=
 countryname <- "Sierra Leone"
 country_count <- country_count + 1
@@ -673,7 +733,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Tanzania}
+\subsubsection{Tanzania}
 <<Tanzania, echo=FALSE, results='hide'>>=
 countryname <- "Tanzania"
 country_count <- country_count + 1
@@ -683,7 +743,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Togo}
+\subsubsection{Togo}
 <<Togo, echo=FALSE, results='hide'>>=
 countryname <- "Togo"
 country_count <- country_count + 1
@@ -693,7 +753,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Uganda}
+\subsubsection{Uganda}
 <<Uganda, echo=FALSE, results='hide'>>=
 countryname <- "Uganda"
 country_count <- country_count + 1
@@ -704,7 +764,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Zambia}
+\subsubsection{Zambia}
 <<Zambia, echo=FALSE, results='hide'>>=
 countryname <- "Zambia"
 country_count <- country_count + 1
@@ -715,7 +775,7 @@ country_count <- country_count + 1
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
-\subsection{Zimbabwe}
+\subsubsection{Zimbabwe}
 <<Zimbabwe, echo=FALSE, results='hide'>>=
 countryname <- "Zimbabwe"
 country_count <- country_count + 1
@@ -726,13 +786,13 @@ country_count <- country_count + 1
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
 \clearpage
-\section{Full table of the complete results: 5-year period}
+\subsection{Table of All Results: 5-year Periods}
 {\scriptsize
 \input{../Main/Tables/final_xtable_period.tex}
 }
 
 \clearpage
-\section{Full table of the complete results: yearly estimates}
+\subsection{Table of All Results: 1-year Periods}
 {\scriptsize
 \input{../Main/Tables/final_xtable_period.tex}
 }

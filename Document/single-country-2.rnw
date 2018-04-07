@@ -17,29 +17,29 @@
 % @
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Plot1 
-<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = "Smooth versus direct Admin 1 estimates. Left: Combined (meta-analysis) survey estimate against combined direct estimates. Right: Combined (meta-analysis) survey estimate against direct estimates from each survey.">>=
+<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0(countryname3, ": Smooth versus direct Admin 1 estimates. Left: Combined (meta-analysis) survey estimate against combined direct estimates. Right: Combined (meta-analysis) survey estimate against direct estimates from each survey.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/SmoothvDirect", countryname2, "_meta.pdf"))
 @
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Plot2 
-<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0("Maps of posterior medians for ", countryname3,"  over time.")>>=
+<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0(countryname3, ": Maps of posterior medians over time.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/SmoothMedian", countryname2, ".pdf")) 
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Plot2a
-<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0("Maps of reduction of posterior median U5MR in each five-year period compared to 1990 in ", countryname3," over time.")>>=
+<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0(countryname3, ": Maps of reduction of posterior median U5MR in each five-year period compared to 1990 over time.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/ReductionMedian", countryname2, ".pdf"))
 @
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Plot3 
-<< echo=FALSE, out.width = ".95\\textwidth", fig.width = 9, fig.height = 6, fig.cap = 'Smoothed regional estimates over time. The line indicates yearly posterior median estimates and error bars indicate 95 \\% posterior credible interval at each time period.'>>=
+<< echo=FALSE, out.width = ".95\\textwidth", fig.width = 9, fig.height = 6, fig.cap = paste0(countryname3, ": Smoothed regional estimates over time. The line indicates yearly posterior median estimates and error bars indicate 95 \\% posterior credible interval at each time period.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/Yearly_v_Periods_", countryname2, ".pdf"))
 @
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Plot4 
-<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 6, fig.height = 9, fig.cap = "Smoothed regional estimates over time compared to the direct estimates from each surveys. Direct estimates are not benchmarked with UN estimates. The line indicates posterior median and error bars indicate 95\\% posterior credible interval.">>=
+<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 6, fig.height = 9, fig.cap = paste0(countryname3, ": Smoothed regional estimates over time compared to the direct estimates from each surveys. Direct estimates are not benchmarked with UN estimates. The line indicates posterior median and error bars indicate 95\\% posterior credible interval.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/LineSubMedian", countryname2, ".pdf")) 
 @

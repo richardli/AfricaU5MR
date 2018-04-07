@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%% Plot5 
-<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = "Temporal national trends along with UN (B3) estimates described in You et al. (2015) and IHME estimates based on GBD 2015 Child Mortality Collaborators (2016). RW2 represents the smoothed national estimates using the original data before benchmarking with UN estimates. RW2-adj represents the smoothed national estimates using the benchmarked data.">>=
+<< echo=FALSE, out.width = ".9\\textwidth", fig.width = 12, fig.height = 6, fig.cap = paste0(countryname3, ": Temporal national trends along with UN (B3) estimates described in You et al. (2015) and IHME estimates based on GBD 2015 Child Mortality Collaborators (2016). RW2 represents the smoothed national estimates using the original data before benchmarking with UN estimates. RW2-adj represents the smoothed national estimates using the benchmarked data.")>>=
 fig_count <- fig_count + 1
 knitr::include_graphics(paste0("../Main/Figures/Yearly_national_", countryname2, ".pdf")) 
 @

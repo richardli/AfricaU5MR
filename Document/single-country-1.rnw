@@ -47,7 +47,7 @@ if(length(years.out) > 1){
 	years.out.text <- paste0(years.out, ".")
 }
 if(countryname == "Cote_dIvoire"){
-	countryname3 <- "Côte d'Ivoire"
+	countryname3 <- "C\\^{o}te d'Ivoire"
 }else{
 	countryname3 <- countryname
 }
