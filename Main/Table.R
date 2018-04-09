@@ -264,11 +264,11 @@ print(dim(tab10))
 print(head(tab10))
 
 # all yearly estimates
-out1 <- rbind(tab1, tab3, tab5, tab7, tab9)
+out1 <- rbind(tab1, tab3, tab5, tab7)
 out1 <- out1[with(out1, order(Country, Region, Year, Method)), ]
 
 # all period estimates
-out2 <- rbind(tab2, tab4, tab6, tab8, tab10)
+out2 <- rbind(tab2, tab4, tab6, tab8, tab9, tab10)
 out2 <- out2[with(out2, order(Country, Region, Year, Method)), ]
 
 write.csv(out1, file = "Tables/YearlyEstimatesAll.csv", row.names = FALSE)
