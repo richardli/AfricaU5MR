@@ -132,6 +132,9 @@ g <- g + theme(legend.position="bottom")
 print(g)
 dev.off()
 
+# pdf(paste0("Figures/", countryname2, "-larger.pdf"), width = 12*.6, height = 7*.6)
+# print(g + theme(legend.text = element_text(size=12)) + guides(color=guide_legend(nrow=2)))
+# dev.off()
 
 ###############################################
 ## Plot: Smoothed vs Direct
