@@ -11,66 +11,67 @@ countries <- countries[countries %in% c("Bangladesh", "Indonesia", "Philippines"
 countries[3] <- "Angola"
 countries[1] <- "Burkina Faso"
 
-# if(countries[1] != "Burkina Faso"){
-# 	stop("First country not Burkina Faso")
-# }else{
-# 	# Read first country, Burkina Faso
-# 	info <- read.csv(paste0("../CountryMain/CountryInfo/", countries[1], ".csv"))
-# 	final_name_ordered <- as.character(info[, 3])[which(as.character(info[, 3]) != "")]
-# 	geo <- readShapePoly(paste0("../Data/map/", countries[1], "/sdr_subnational_boundaries.shp"))
-# 	merge.id <- c("Central/South", "North", "East", "West", "Central/South")
-# 	newdata <- data.frame(NAME_final = final_name_ordered)
-# 	newdata$NAME_final <- as.character(newdata$NAME_final)
-# 	newdata <- cbind(data.frame(geo)[-1, ], newdata)
+if(!file.exists("../Data/Africa_all.rda")){
+  if(countries[1] != "Burkina Faso"){
+  	stop("First country not Burkina Faso")
+  }else{
+  	# Read first country, Burkina Faso
+  	info <- read.csv(paste0("../CountryMain/CountryInfo/", countries[1], ".csv"))
+  	final_name_ordered <- as.character(info[, 3])[which(as.character(info[, 3]) != "")]
+  	geo <- readShapePoly(paste0("../Data/map/", countries[1], "/sdr_subnational_boundaries.shp"))
+  	merge.id <- c("Central/South", "North", "East", "West", "Central/South")
+  	newdata <- data.frame(NAME_final = final_name_ordered)
+  	newdata$NAME_final <- as.character(newdata$NAME_final)
+  	newdata <- cbind(data.frame(geo)[-1, ], newdata)
 
-# 	rownames(newdata) <- final_name_ordered
-# 	geo.all <- unionSpatialPolygons(geo, merge.id )
-# 	geo.all <- SpatialPolygonsDataFrame(geo.all, newdata)
-# 	geo.all$NAME_1 <- geo.all$NAME_final <- paste0(countries[1], ":", geo.all$NAME_final)
-# 	geo.all$Country_name <- countries[1]
-	
+  	rownames(newdata) <- final_name_ordered
+  	geo.all <- unionSpatialPolygons(geo, merge.id )
+  	geo.all <- SpatialPolygonsDataFrame(geo.all, newdata)
+  	geo.all$NAME_1 <- geo.all$NAME_final <- paste0(countries[1], ":", geo.all$NAME_final)
+  	geo.all$Country_name <- countries[1]
+  	
 
-# 	# add all other countries
+  	# add all other countries
 
-# 	for(i in 2:length(countries)){
-# 		if(!file.exists(paste0("../CountryMain/CountryInfo/", countries[i], ".csv"))){
-# 			stop(paste("Missing country information", countries[i]))
-# 		}
-# 		info <- read.csv(paste0("../CountryMain/CountryInfo/", countries[i], ".csv"))
-# 		final_name_ordered <- as.character(info[, 3])[which(as.character(info[, 3]) != "")]
-#     if(countries[i] != "Gambia"){
-#   		geo <- readShapePoly(paste0("../Data/map/", countries[i], "/sdr_subnational_boundaries.shp"))
-#   		geo$NAME_1 <- geo$REGNAME
-#     }else{
-#        next
-#     }
-# 		# country-specific fixes
-# 		if(countries[i] == "Tanzania"){
-# 		  geo <- geo[geo$NAME_1 != "rest zanzibar",]
-# 		  geo <- geo[geo$NAME_1 != "pemba",]
-# 		  geo$NAME_1 <- revalue(geo$NAME_1, c("coast"="pwani"))
-# 		  geo$NAME_final <- final_name_ordered
-# 		}else if(countries[i] == "Indonesia"){
-# 		  geo <- geo[geo$NAME_1 != "east timor",]
-# 		  geo$NAME_final <- final_name_ordered
-# 		}
-# 		geo$NAME_final <- final_name_ordered
-# 		geo$NAME_final <- paste0(countries[i], ":", geo$NAME_final)
-# 		geo$Country_name <- countries[i]
+  	for(i in 2:length(countries)){
+  		if(!file.exists(paste0("../CountryMain/CountryInfo/", countries[i], ".csv"))){
+  			stop(paste("Missing country information", countries[i]))
+  		}
+  		info <- read.csv(paste0("../CountryMain/CountryInfo/", countries[i], ".csv"))
+  		final_name_ordered <- as.character(info[, 3])[which(as.character(info[, 3]) != "")]
+      if(countries[i] != "Gambia"){
+    		geo <- readShapePoly(paste0("../Data/map/", countries[i], "/sdr_subnational_boundaries.shp"))
+    		geo$NAME_1 <- geo$REGNAME
+      }else{
+         next
+      }
+  		# country-specific fixes
+  		if(countries[i] == "Tanzania"){
+  		  geo <- geo[geo$NAME_1 != "rest zanzibar",]
+  		  geo <- geo[geo$NAME_1 != "pemba",]
+  		  geo$NAME_1 <- revalue(geo$NAME_1, c("coast"="pwani"))
+  		  geo$NAME_final <- final_name_ordered
+  		}else if(countries[i] == "Indonesia"){
+  		  geo <- geo[geo$NAME_1 != "east timor",]
+  		  geo$NAME_final <- final_name_ordered
+  		}
+  		geo$NAME_final <- final_name_ordered
+  		geo$NAME_final <- paste0(countries[i], ":", geo$NAME_final)
+  		geo$Country_name <- countries[i]
 
-#     geo.all <- rbind(geo.all, geo, makeUniqueIDs = TRUE)
-#     cat(".")  
-# 	}
-# }
-# ## add Gambia
-# info <- read.csv(paste0("../CountryMain/CountryInfo/Gambia.csv"))
-# final_name_ordered <- as.character(info[, 3])[which(as.character(info[, 3]) != "")]
-# geo <- readShapePoly(paste0("../Data/map/Gambia/GMB_adm1.shp"))
-# geo$NAME_final <- final_name_ordered
-# geo$NAME_final <- paste0("Gambia:", geo$NAME_final)
-# geo$Country_name <- "Gambia"
-# geo.all <- bind(geo.all, geo)
-# save(geo.all, file = "../data/Africa_all.rda")
+      geo.all <- rbind(geo.all, geo, makeUniqueIDs = TRUE)
+      cat(".")  
+  	}
+  }
+  ## add Gambia
+  info <- read.csv(paste0("../CountryMain/CountryInfo/Gambia.csv"))
+  final_name_ordered <- as.character(info[, 3])[which(as.character(info[, 3]) != "")]
+  geo <- readShapePoly(paste0("../Data/map/Gambia/GMB_adm1.shp"))
+  geo$NAME_final <- final_name_ordered
+  geo$NAME_final <- paste0("Gambia:", geo$NAME_final)
+  geo$Country_name <- "Gambia"
+  geo.all <- bind(geo.all, geo)
+  save(geo.all, file = "../Data/Africa_all.rda")
 
 # region_name_only <- unlist(strsplit(geo.all$NAME_final, ":"))
 # region_name_only <- region_name_only[2 * (1:(length(region_name_only)/2))]
@@ -83,7 +84,7 @@ countries[1] <- "Burkina Faso"
 # text(coordinates(geo.all), 
 # 	labels = region_name_only)
 # dev.off()
-
+}
 
 # ##################################################################
 # ##################################################################
@@ -103,7 +104,7 @@ library(xtable)
 expit<-function(x){
     exp(x)/(1+exp(x))
 }
-geo.rest <- readShapePoly("../Data/map/AfricanCountries/AfricanCountires.shp")
+geo.rest <- readShapePoly("../Data/map/AfricanCountries/Africa.shp")
 load("../Data/Africa_all.rda")
 
 plot.res.all <- NULL
@@ -258,7 +259,7 @@ geo.all3Points <- fortify(geo.all3, region = "NAME_final")
 geo.all3Points <- merge(geo.all3Points, geo.all3@data, by = "id", by.y = "NAME_final")
 
 g<- ggplot() 
-g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill="gray90", color = "gray40")
+g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill="gray90", color = "gray60")
 g0 <- g + geom_polygon(data = geo.all3Points, aes(x=long, y=lat, group = group, fill = spatial_var), color = "gray80") 
 g1 <- g + geom_polygon(data = geo.all3Points, aes(x=long, y=lat, group = group, fill = RW2), color = "gray80") 
 g2 <- g + geom_polygon(data = geo.all3Points, aes(x=long, y=lat, group = group, fill = ICAR), color = "gray80") 
@@ -269,7 +270,7 @@ g5 <- g + geom_polygon(data = geo.all3Points, aes(x=long, y=lat, group = group, 
 
 sc2 <- geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill=NA, color = "gray40")
 myPalette <- colorRampPalette((brewer.pal(9, "BuPu")))
-sc3 <- theme(legend.position = c(0.1, 0.2), 
+sc3 <- theme(legend.position = c(0.15, 0.3), 
           legend.title = element_text(size = 20, face = "bold"), 
           legend.text = element_text(size = 15), 
           legend.key.size = unit(1.5, "cm"),
@@ -277,259 +278,247 @@ sc3 <- theme(legend.position = c(0.1, 0.2),
           axis.title = element_blank(), 
             panel.grid.major = element_blank(), 
             panel.grid.minor = element_blank())  
+sc4 <- guides(fill = guide_colourbar(barwidth = 3.7, barheight = 18))
+
 
 jpeg(paste0("Figures/Africa_random_space", ".jpeg"), width=1000, height=1100)
-g0 <- g0 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "Space")  + coord_map() + ylim(-37,37) + theme_bw() + sc3
+g0 <- g0 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "Space")  + coord_map() + ylim(-36, 37.5) + theme_bw() + sc3 + sc4
 print(g0)
 dev.off() 
 
 jpeg(paste0("Figures/Africa_random_RW2", ".jpeg"), width=1000, height=1100)
-g1 <- g1 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "RW2")  + coord_map() + ylim(-37,37) + theme_bw() + sc3
+g1 <- g1 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "RW2")  + coord_map() + ylim(-36, 37.5) + theme_bw() + sc3 + sc4
 print(g1)
 dev.off()  
 
 jpeg(paste0("Figures/Africa_random_ICAR", ".jpeg"), width=1000, height=1100)
-g2 <- g2 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "ICAR")  + coord_map() + ylim(-37,37) + theme_bw() + sc3
+g2 <- g2 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "ICAR")  + coord_map() + ylim(-36, 37.5) + theme_bw() + sc3 + sc4
 print(g2)
 dev.off()  
 
 jpeg(paste0("Figures/Africa_random_timeIID", ".jpeg"), width=1000, height=1100)
-g3 <- g3 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "TimeIID")  + coord_map() + ylim(-37,37) + theme_bw() + sc3
+g3 <- g3 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "TimeIID")  + coord_map() + ylim(-36, 37.5) + theme_bw() + sc3 + sc4
 print(g3)
 dev.off() 
 
 jpeg(paste0("Figures/Africa_random_spaceIID", ".jpeg"), width=1000, height=1100)
-g4 <- g4 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "SpaceIID")  + coord_map() + ylim(-37,37) + theme_bw() + sc3
+g4 <- g4 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "SpaceIID")  + coord_map() + ylim(-36, 37.5) + theme_bw() + sc3 + sc4
 print(g4)
 dev.off() 
 
 jpeg(paste0("Figures/Africa_random_spacetime", ".jpeg"), width=1000, height=1100)
-g5 <- g5 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "Space-time")  + coord_map() + ylim(-37,37) + theme_bw() + sc3
+g5 <- g5 + sc2 + scale_fill_gradientn(colours = myPalette(20), limits=c(0, 1), labels = scales::percent_format(), name = "Space-time")  + coord_map() + ylim(-36, 37.5) + theme_bw() + sc3 + sc4
 print(g5)
 dev.off() 
 
 
 # Repeat this for 2015 and 2015-2019 
-
-whichYear <- "2015"
-whichYear <- "15-19"
 gpclibPermit()
+for(whichYear in c("2015", "15-19")){
 
-########################################################
-# MDG drops
-########################################################
-sub <- plot.res.all[plot.res.all$Year == whichYear, ]
-tab <- aggregate(achieve ~ country, sub, sum)
-total <- aggregate(District ~ country, plot.res.all, function(x){length(unique(x))})[,2]
-tab$ratio <- round(tab$achieve / total * 100, 2)
-tab$achieve <- paste0(tab$achieve, "/", total)
-tab$ratio <- paste0(tab$ratio, "%")
-tab$median <- aggregate(drop ~ country, sub, median)[,2] 
-max <- aggregate(drop ~ country, sub, function(x){max(x)})[,2]
-min <- aggregate(drop ~ country, sub, function(x){min(x)})[,2]
-tab$Range <- paste0("[", format(min, digits=1), ",", format(max, digits=2), "]")
-colnames(tab) <- c("Country", "MDG4 achieved", "Percent achieved", "Median deduction", "[Min, Max]")
-print(xtable(tab, digits=c(0,0,0,2,3,0)), include.rownames = F, file = paste0("Tables/final_table_mdg", whichYear, ".tex"))
+  ########################################################
+  # MDG drops
+  ########################################################
+  sub <- plot.res.all[plot.res.all$Year == whichYear, ]
+  tab <- aggregate(achieve ~ country, sub, sum)
+  total <- aggregate(District ~ country, plot.res.all, function(x){length(unique(x))})[,2]
+  tab$ratio <- round(tab$achieve / total * 100, 2)
+  tab$achieve <- paste0(tab$achieve, "/", total)
+  tab$ratio <- paste0(tab$ratio, "%")
+  tab$median <- aggregate(drop ~ country, sub, median)[,2] 
+  max <- aggregate(drop ~ country, sub, function(x){max(x)})[,2]
+  min <- aggregate(drop ~ country, sub, function(x){min(x)})[,2]
+  tab$Range <- paste0("[", format(min, digits=1), ",", format(max, digits=2), "]")
+  colnames(tab) <- c("Country", "MDG4 achieved", "Percent achieved", "Median deduction", "[Min, Max]")
+  print(xtable(tab, digits=c(0,0,0,2,3,0)), include.rownames = F, file = paste0("Tables/final_table_mdg", whichYear, ".tex"))
 
-########################################################
-# Map plot of MDG drops, subnational and national model
-########################################################
-sub <- plot.res.all[plot.res.all$Year == whichYear, ]
-sub0 <- plot.res.national[plot.res.national$Year == whichYear, ]
-sub0 <- sub0[sub0$Method == "RW2", c("Country", "drop")]
-colnames(sub0) <- c("country", "drop.national")
-sub <- merge(sub, sub0)
-sub$District <- as.character(sub$District)
-
-if(whichYear == "2015"){
-  types <- 1:4
+  ########################################################
+  # Map plot of MDG drops, subnational and national model
+  ########################################################
+  sub <- plot.res.all[plot.res.all$Year == whichYear, ]
   sub0 <- plot.res.national[plot.res.national$Year == whichYear, ]
-  sub0 <- sub0[sub0$Method %in% c("UN"), c("Country", "drop")]
-  colnames(sub0) <- c("country", "drop.UN")
-  sub0 <- sub0[sub0$country %in% countries, ]
-  sub1 <- plot.res.national[plot.res.national$Year == whichYear, ]
-  sub1 <- sub1[sub1$Method %in% c("IHME"), c("Country", "drop")]
-  colnames(sub1) <- c("country", "drop.IHME")
-  sub1 <- sub1[sub1$country %in% countries, ]
+  sub0 <- sub0[sub0$Method == "RW2", c("Country", "drop")]
+  colnames(sub0) <- c("country", "drop.national")
   sub <- merge(sub, sub0)
-  sub <- merge(sub, sub1)
-}else{
-  types <- 1:2
-}
+  sub$District <- as.character(sub$District)
 
-
-ymin <- min(c(sub$drop, sub$drop.national, sub$drop.UN, sub$drop.IHME)) 
-ymax <- max(c(sub$drop, sub$drop.national, sub$drop.UN, sub$drop.IHME)) 
-ymax <- max(round(ymax, 2)+0.01, 0.9)
-ymin <- round(ymin, 2) - 0.01
-
-# check names again
-sub$District[sub$District == "Bangladesh:barisal"] <- "Bangladesh:barishal"
-sub$District[sub$District == "Bangladesh:rajshahi"] <- "Bangladesh:rajshani"
-sub$NAME_final <- sub$District
-print(paste0( 
-"Number of regions not matching the map: ",
-length(sub$District[which(sub$District %in% geo.all$NAME_final == F)])
-))
-
-# merge with map
-geo.all2 <- merge(geo.all, sub, by.x = "NAME_final", by.y = "NAME_final")
-geo.all2Points <- fortify(geo.all2, region = "NAME_final")
-geo.all2Points <- merge(geo.all2Points, geo.all2@data, by = "id", by.y = "NAME_final")
-
-# add central location for country name annotation
-tmp <- by(geo.all2Points, geo.all2Points$Country_name, function(x) {Polygon(x[c('long', 'lat')])@labpt})
-centroids <- setNames(do.call("rbind.data.frame", tmp), c('long', 'lat')) 
-rownames(centroids) <- names(tmp)
-centroids$label <- geo.all2Points$Country_name[match(rownames(centroids), geo.all2Points$Country_name)]
-
-for(type in types){
-  if(type == 1){
-    geo.all2Points$toplot <- geo.all2Points$drop
-  }else if(type == 2){
-    geo.all2Points$toplot <- geo.all2Points$drop.national
-  }else if(type == 3){
-    geo.all2Points$toplot <- geo.all2Points$drop.UN
-  }else if(type == 4){
-    geo.all2Points$toplot <- geo.all2Points$drop.IHME
-  }
-  g<- ggplot() 
-  g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill="gray90", color = "gray40")
-  g <- g + geom_polygon(data = geo.all2Points, aes(x=long, y=lat, group = group, fill = toplot), color = "gray80")
-  g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill=NA, color = "gray40")
-  g <- g + coord_map() + ylim(-37,37) + theme_bw() + theme(legend.position = c(0.1, 0.2), 
-            legend.title = element_text(size = 20, face = "bold"), 
-            legend.text = element_text(size = 15), 
-            legend.key.size = unit(1.5, "cm"),
-            axis.text = element_blank(), 
-            axis.title = element_blank(), 
-            panel.grid.major = element_blank(), 
-            panel.grid.minor = element_blank()) 
-  g <- g #+ggtitle(title) + theme(plot.title = element_text(size=33))
-  min <- ymin 
-  max <- ymax
-  breaks <- c(min, 0, 0.33, 0.67, 0.9)
-  
-  ratio <- ((2/3 - min) / (max - min))
-  mult <- (max - min) * 300
-  base_l <- colorRampPalette(brewer.pal(9,"RdYlBu"))(ratio*mult*2) # blue2red(ratio * mult * 2)
-  base_u <- colorRampPalette(brewer.pal(9,"RdYlBu"))((1-ratio)*mult*2) # blue2red((1-ratio) * mult * 2)
-  basecolor2 <- c(base_l[1:(ratio * mult)], 
-                base_u[-(1:((1 - ratio) * mult))])
-  # image(matrix(1:length(basecolor2)), col = basecolor2)
-  sc <- scale_fill_gradientn(colors = basecolor2, limit = c(min, max), breaks = breaks, name = "Reduction")
-  
-  
-  if(type == 1){
-    pre <- "Africa" 
-  }else if(type == 2){
-    pre = "Africa_national"
-  }else if(type == 3){
-    pre = "Africa_UN"
+  if(whichYear == "2015"){
+    types <- 1:4
+    sub0 <- plot.res.national[plot.res.national$Year == whichYear, ]
+    sub0 <- sub0[sub0$Method %in% c("UN"), c("Country", "drop")]
+    colnames(sub0) <- c("country", "drop.UN")
+    sub0 <- sub0[sub0$country %in% countries, ]
+    sub1 <- plot.res.national[plot.res.national$Year == whichYear, ]
+    sub1 <- sub1[sub1$Method %in% c("IHME"), c("Country", "drop")]
+    colnames(sub1) <- c("country", "drop.IHME")
+    sub1 <- sub1[sub1$country %in% countries, ]
+    sub <- merge(sub, sub0)
+    sub <- merge(sub, sub1)
   }else{
-    pre = "Africa_IHME"
+    types <- 1:2
   }
-  jpeg(paste0("Figures/", pre, "_reduction_", whichYear, ".jpeg"), width=1000, height=1100)
-  g <- g + sc
-  print(g)
-  dev.off() 
-  # jpeg(paste0("Figures/", pre, "_reduction_", post, whichYear, "_label.jpeg"), width=1000, height=1100)
-  # g <- g + with(centroids, annotate(geom="text", x = long, y=lat, label = label, size = 4))    
-  # print(g)
-  # dev.off() 
-}
- 
-###################################################
-#  Projection
-###################################################
-sub <- plot.res.all[plot.res.all$Year == whichYear, ]
-sub0 <- plot.res.national[plot.res.national$Year == whichYear, ]
-sub0a <- sub0[sub0$Method == "RW2", c("Country", "med")]
-colnames(sub0a) <- c("country", "med.national")
-sub <- merge(sub, sub0a)
 
-if(whichYear == "2015"){
-  sub0 <- plot.res.national[plot.res.national$Year == "2015", ]
-  sub0b <- sub0[sub0$Method == "UN", c("Country", "med")]
-  colnames(sub0b) <- c("country", "med.UN")
-  sub0c <- sub0[sub0$Method == "IHME", c("Country", "med")]
-  colnames(sub0c) <- c("country", "med.IHME")
-  sub <- merge(sub, sub0b)
-  sub <- merge(sub, sub0c)
-  types <- 1:4
-}else{
-  types <- 1:2
-}
 
-ymin <- min(c(sub$med, sub$med.national, sub$med.UN, sub$med.IHME)) 
-ymax <- max(c(sub$med, sub$med.national, sub$med.UN, sub$med.IHME))  
-ymax <- round(ymax, 2) + 0.01 
-ymin <- round(ymin, 2) - 0.01
-sub$District <- as.character(sub$District)
+  ymin <- min(c(sub$drop, sub$drop.national, sub$drop.UN, sub$drop.IHME)) 
+  ymax <- max(c(sub$drop, sub$drop.national, sub$drop.UN, sub$drop.IHME)) 
+  ymax <- max(round(ymax, 2)+0.01, 0.9)
+  ymin <- round(ymin, 2) - 0.01
 
-# check names again
-sub$District[sub$District == "Bangladesh:barisal"] <- "Bangladesh:barishal"
-sub$District[sub$District == "Bangladesh:rajshahi"] <- "Bangladesh:rajshani"
-sub$NAME_final <- sub$District
-print(paste0( 
-"Number of regions not matching the map: ",
-length(sub$District[which(sub$District %in% geo.all$NAME_final == F)])
-))
+  # check names again
+  sub$District[sub$District == "Bangladesh:barisal"] <- "Bangladesh:barishal"
+  sub$District[sub$District == "Bangladesh:rajshahi"] <- "Bangladesh:rajshani"
+  sub$NAME_final <- sub$District
+  print(paste0( 
+  "Number of regions not matching the map: ",
+  length(sub$District[which(sub$District %in% geo.all$NAME_final == F)])
+  ))
 
-# merge with map
-geo.all2 <- merge(geo.all, sub, by.x = "NAME_final", by.y = "NAME_final")
-geo.all2Points <- fortify(geo.all2, region = "NAME_final")
-geo.all2Points <- merge(geo.all2Points, geo.all2@data, by = "id", by.y = "NAME_final")
+  # merge with map
+  geo.all2 <- merge(geo.all, sub, by.x = "NAME_final", by.y = "NAME_final")
+  geo.all2Points <- fortify(geo.all2, region = "NAME_final")
+  geo.all2Points <- merge(geo.all2Points, geo.all2@data, by = "id", by.y = "NAME_final")
 
-# add central location for country name annotation
-tmp <- by(geo.all2Points, geo.all2Points$Country_name, function(x) {Polygon(x[c('long', 'lat')])@labpt})
-centroids <- setNames(do.call("rbind.data.frame", tmp), c('long', 'lat')) 
-rownames(centroids) <- names(tmp)
-centroids$label <- geo.all2Points$Country_name[match(rownames(centroids), geo.all2Points$Country_name)]
+  # add central location for country name annotation
+  tmp <- by(geo.all2Points, geo.all2Points$Country_name, function(x) {Polygon(x[c('long', 'lat')])@labpt})
+  centroids <- setNames(do.call("rbind.data.frame", tmp), c('long', 'lat')) 
+  rownames(centroids) <- names(tmp)
+  centroids$label <- geo.all2Points$Country_name[match(rownames(centroids), geo.all2Points$Country_name)]
 
-for(type in types){
-  if(type == 1){
-    geo.all2Points$toplot <- geo.all2Points$med
-  }else if(type == 2){
-    geo.all2Points$toplot <- geo.all2Points$med.national
-  }else if(type == 3){
-    geo.all2Points$toplot <- geo.all2Points$med.UN
-  }else if(type == 4){
-    geo.all2Points$toplot <- geo.all2Points$med.IHME
-  }
-  g<- ggplot() 
-  g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill="gray90", color = "gray40")
-  g <- g + geom_polygon(data = geo.all2Points, aes(x=long, y=lat, group = group, fill = toplot), color = "gray80")
-  g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill=NA, color = "gray40")
-  g <- g + coord_map() + ylim(-37,37) + theme_bw() +
-      theme(legend.position = c(0.1, 0.2), 
-            legend.title = element_text(size = 20, face = "bold"), 
-            legend.text = element_text(size = 15), 
-            legend.key.size = unit(1.5, "cm"),
-            axis.text = element_blank(), 
-            axis.title = element_blank(), 
-            panel.grid.major = element_blank(), 
-            panel.grid.minor = element_blank())
-  g <- g #+ggtitle(title) + theme(plot.title = element_text(size=33))    
-  # g <- g +  with(centroids, annotate(geom="text", x = long, y=lat, label = label, size = 4))    
-  min <- ymin
-  max <- ymax 
-  myPalette <- colorRampPalette((brewer.pal(9, "YlGn")))
+  for(type in types){
     if(type == 1){
-    pre <- "Africa" 
-  }else if(type == 2){
-    pre = "Africa_national"
-  }else if(type == 3){
-    pre = "Africa_UN"
-  }else{
-    pre = "Africa_IHME"
+      geo.all2Points$toplot <- geo.all2Points$drop
+    }else if(type == 2){
+      geo.all2Points$toplot <- geo.all2Points$drop.national
+    }else if(type == 3){
+      geo.all2Points$toplot <- geo.all2Points$drop.UN
+    }else if(type == 4){
+      geo.all2Points$toplot <- geo.all2Points$drop.IHME
+    }
+    g<- ggplot() 
+    g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill="gray90", color = "gray40")
+    g <- g + geom_polygon(data = geo.all2Points, aes(x=long, y=lat, group = group, fill = toplot), color = "gray80")
+    g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill=NA, color = "gray40")
+    g <- g + coord_map() + ylim(-36, 37.5) + theme_bw() + sc3 + sc4
+    g <- g #+ggtitle(title) + theme(plot.title = element_text(size=33))
+    min <- ymin 
+    max <- ymax
+    breaks <- c(min, 0, 0.33, 0.67, 0.9)
+    
+    ratio <- ((2/3 - min) / (max - min))
+    mult <- (max - min) * 300
+    base_l <- colorRampPalette(brewer.pal(9,"RdYlBu"))(ratio*mult*2) # blue2red(ratio * mult * 2)
+    base_u <- colorRampPalette(brewer.pal(9,"RdYlBu"))((1-ratio)*mult*2) # blue2red((1-ratio) * mult * 2)
+    basecolor2 <- c(base_l[1:(ratio * mult)], 
+                  base_u[-(1:((1 - ratio) * mult))])
+    # image(matrix(1:length(basecolor2)), col = basecolor2)
+    sc <- scale_fill_gradientn(colors = basecolor2, limit = c(min, max), breaks = breaks, name = "Reduction")
+    
+    
+    if(type == 1){
+      pre <- "Africa" 
+    }else if(type == 2){
+      pre = "Africa_national"
+    }else if(type == 3){
+      pre = "Africa_UN"
+    }else{
+      pre = "Africa_IHME"
+    }
+    jpeg(paste0("Figures/", pre, "_reduction_", whichYear, ".jpeg"), width=1000, height=1100)
+    g <- g + sc
+    print(g)
+    dev.off() 
+    # jpeg(paste0("Figures/", pre, "_reduction_", post, whichYear, "_label.jpeg"), width=1000, height=1100)
+    # g <- g + with(centroids, annotate(geom="text", x = long, y=lat, label = label, size = 4))    
+    # print(g)
+    # dev.off() 
   }
-  jpeg(paste0("Figures/", pre, "_u5mr_", whichYear, ".jpeg"), width=1000, height=1100)
-   g <- g + scale_fill_gradientn(colours = myPalette(20), limits=c(min, max), labels = scales::percent_format(), name = "U5MR")
-  print(g)
-  dev.off() 
-}
+   
+  ###################################################
+  #  Projection
+  ###################################################
+  sub <- plot.res.all[plot.res.all$Year == whichYear, ]
+  sub0 <- plot.res.national[plot.res.national$Year == whichYear, ]
+  sub0a <- sub0[sub0$Method == "RW2", c("Country", "med")]
+  colnames(sub0a) <- c("country", "med.national")
+  sub <- merge(sub, sub0a)
 
+  if(whichYear == "2015"){
+    sub0 <- plot.res.national[plot.res.national$Year == "2015", ]
+    sub0b <- sub0[sub0$Method == "UN", c("Country", "med")]
+    colnames(sub0b) <- c("country", "med.UN")
+    sub0c <- sub0[sub0$Method == "IHME", c("Country", "med")]
+    colnames(sub0c) <- c("country", "med.IHME")
+    sub <- merge(sub, sub0b)
+    sub <- merge(sub, sub0c)
+    types <- 1:4
+  }else{
+    types <- 1:2
+  }
+
+  ymin <- min(c(sub$med, sub$med.national, sub$med.UN, sub$med.IHME)) 
+  ymax <- max(c(sub$med, sub$med.national, sub$med.UN, sub$med.IHME))  
+  ymax <- round(ymax, 2) + 0.01 
+  ymin <- round(ymin, 2) - 0.01
+  # hard code ymax so it's consistent across different plots
+  ymax <- max(ymax, 0.29)
+  sub$District <- as.character(sub$District)
+
+  # check names again
+  sub$District[sub$District == "Bangladesh:barisal"] <- "Bangladesh:barishal"
+  sub$District[sub$District == "Bangladesh:rajshahi"] <- "Bangladesh:rajshani"
+  sub$NAME_final <- sub$District
+  print(paste0( 
+  "Number of regions not matching the map: ",
+  length(sub$District[which(sub$District %in% geo.all$NAME_final == F)])
+  ))
+  # merge with map
+  geo.all2 <- merge(geo.all, sub, by.x = "NAME_final", by.y = "NAME_final")
+  geo.all2Points <- fortify(geo.all2, region = "NAME_final")
+  geo.all2Points <- merge(geo.all2Points, geo.all2@data, by = "id", by.y = "NAME_final")
+
+  # add central location for country name annotation
+  tmp <- by(geo.all2Points, geo.all2Points$Country_name, function(x) {Polygon(x[c('long', 'lat')])@labpt})
+  centroids <- setNames(do.call("rbind.data.frame", tmp), c('long', 'lat')) 
+  rownames(centroids) <- names(tmp)
+  centroids$label <- geo.all2Points$Country_name[match(rownames(centroids), geo.all2Points$Country_name)]
+
+  for(type in types){
+    if(type == 1){
+      geo.all2Points$toplot <- geo.all2Points$med
+    }else if(type == 2){
+      geo.all2Points$toplot <- geo.all2Points$med.national
+    }else if(type == 3){
+      geo.all2Points$toplot <- geo.all2Points$med.UN
+    }else if(type == 4){
+      geo.all2Points$toplot <- geo.all2Points$med.IHME
+    }
+    g<- ggplot() 
+    g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill="gray90", color = "gray40")
+    g <- g + geom_polygon(data = geo.all2Points, aes(x=long, y=lat, group = group, fill = toplot), color = "gray80")
+    g <- g + geom_polygon(data = geo.rest, aes(x=long, y=lat, group = group), fill=NA, color = "gray40")
+    g <- g + coord_map() + ylim(-36, 37.5) + theme_bw() + sc3 + sc4
+    g <- g #+ggtitle(title) + theme(plot.title = element_text(size=33))    
+    # g <- g +  with(centroids, annotate(geom="text", x = long, y=lat, label = label, size = 4))    
+    min <- ymin
+    max <- ymax 
+    myPalette <- colorRampPalette((brewer.pal(9, "YlGn")))
+      if(type == 1){
+      pre <- "Africa" 
+    }else if(type == 2){
+      pre = "Africa_national"
+    }else if(type == 3){
+      pre = "Africa_UN"
+    }else{
+      pre = "Africa_IHME"
+    }
+    breaks <- c(5, 10, 15, 20, 25, 29)/100
+    jpeg(paste0("Figures/", pre, "_u5mr_", whichYear, ".jpeg"), width=1000, height=1100)
+     g <- g + scale_fill_viridis_c(direction=-1, limits=c(min, max), name = "U5MR", breaks=breaks)
+     # , labels = scales::percent_format()
+    print(g)
+    dev.off() 
+  }
+}
 
 
 
