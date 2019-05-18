@@ -1,4 +1,4 @@
-## srun --pty --partition=build --time=1:00:00 --mem-per-cpu=2500 /bin/bash
+## srun --pty --partition=build --time=0:30:00 --mem-per-cpu=2500 /bin/bash
 ## module load R
 ## R
 install.packages("ggplot2")
@@ -13,6 +13,7 @@ install.packages("plyr")
 install.packages("INLA", repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE)
 install.packages("lattice")
 install.packages("gridExtra")
+install.packages("SUMMER")
 
 
 library(ggplot2)
@@ -27,3 +28,4 @@ library(plyr)
 library(lattice)
 library(gridExtra)
 library(INLA)
+library(SUMMER)
