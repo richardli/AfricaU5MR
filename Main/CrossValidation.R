@@ -23,12 +23,14 @@ library(gpclib)
 gpclibPermit()
 library(plyr)
 library(INLA)
+inla.setOption(mkl=TRUE) 
 library(ggplot2)
 library(RColorBrewer)
 library(lattice)
 library(maptools)
+library(SUMMER)
 # library(batch)
-load(paste0("Fitted/", countryname, "-yearly.rda"))
+load(paste0("Fitted-new/", countryname, "-yearly.rda"))
 countryname2 <- gsub(" ", "", countryname)
 
 set.seed(12345)
@@ -72,8 +74,8 @@ expit<-function(x){ exp(x)/(1+exp(x))}
 logit<-function(x){ log(x/(1-x))}
 
 #########################################################
-source("../HelperFunctions/inla_function.R")
-source("../HelperFunctions/inla_function_yearly.R")
+# source("../HelperFunctions/inla_function.R")
+# source("../HelperFunctions/inla_function_yearly.R")
 priors <- list(a.iid = 0.5, a.rw1=0.5, a.rw2 = 0.5, a.icar=0.5, b.iid = 0.001487953, b.rw1 = 0.001487953, b.rw2 = 0.001487953, b.icar = 0.001487953)
 
 ##########################################
@@ -96,7 +98,7 @@ for(yy in 1:length(years)){
 		# )
 	data.rm <- data[-remove, ]
 	# data.adj.rm[remove, c(3:7, 10:16)] <- NA
-	inla_model <- fitINLA_yearly(data.rm, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 2, year_range = year_range, m=5, is.yearly=TRUE, type.st = 4)
+	inla_model <- fitINLA(data.rm, geo = geo, priors = priors, useHyper = TRUE, Amat = mat, year_names = years.all, rw = 2, year_range = year_range, m = 5, is.yearly = TRUE, type.st = 4)
 	allfits[[counter]] <- inla_model
 	names(allfits)[counter] <- years[yy]
 	counter <- counter + 1
@@ -229,7 +231,7 @@ for(rr in 1:length(final_name_ordered)){
 		)
 		data.rm <- data[-remove, ]
 		# data.adj.rm[remove, c(3:7, 10:16)] <- NA
-		inla_model <- fitINLA_yearly(data.rm, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 2, year_range = year_range, m=5, is.yearly=TRUE, type.st = 4)
+		inla_model <- fitINLA(data.rm, geo = geo, priors = priors, useHyper = TRUE, Amat = mat, year_names = years.all, rw = 2, year_range = year_range, m = 5, is.yearly = TRUE, type.st = 4)
 		allfits2[[counter]] <- inla_model
 		names(allfits2)[counter] <- paste0(final_name_ordered[rr], years[yy])
 		counter <- counter + 1
@@ -351,11 +353,11 @@ out <- list(resultsYear = resultsYear,
 			cover2 = cover1a,
 			cover3 = cover2,
 			cover4 = cover2a)
-save(out, file = paste0("Fitted/", countryname, "-yearlyCV.rda"))
+save(out, file = paste0("Fitted-new/", countryname, "-yearlyCV.rda"))
 
 out$allfits = allfits
 out$allfits2 = allfits2
-save(out, file = paste0("Fitted/", countryname, "-yearlyCVfull.rda"))
+save(out, file = paste0("Fitted-new/", countryname, "-yearlyCVfull.rda"))
 
 
 

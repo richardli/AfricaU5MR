@@ -27,18 +27,20 @@ library(ggplot2)
 library(RColorBrewer)
 library(lattice)
 library(maptools)
+library(SUMMER)
 # library(batch)
 
 
 set.seed(12345)
-# countryname <- commandArgs(trailingOnly = TRUE)
-# countryname <- "Malawi"  
 updateplot <- FALSE
 
 # parseCommandArgs()
 
 # fix for INLA to run on stats cluster...
 # INLA:::inla.dynload.workaround() 
+# Faster version on testing branch (mac)
+# inla.setOption(mkl=TRUE) 
+
 
 # Read in country specific information
 info <- read.csv(paste0("../CountryMain/CountryInfo/", countryname, ".csv"))
@@ -144,7 +146,7 @@ if(countryname == "Comoros"){
 # input: 5q0, variance of logit, and adjustment factor c
 # output: 5q0, logit, variance of logit, and prec (adjusted)
 adjust <- function(p, v, c){
-	f.prime <- 1 - (c - 1) * exp(p) / (c + (c-1) * exp(p))
+	f.prime <- 1 - (c - 1) * (p/(1-p)) / (c + (c-1) * (p/(1-p)))
 	p <- p / c
 	v <- v * f.prime^2
 	return(c(p, log(p/(1-p)), v, 1/v))
@@ -535,8 +537,8 @@ countrylabel <- countryname
 
 ######################################################################
 ## First fit national models
-source("../HelperFunctions/inla_function.R")
-source("../HelperFunctions/inla_function_yearly.R")
+# source("../HelperFunctions/inla_function.R")
+# source("../HelperFunctions/inla_function_yearly.R")
 
 # priors <- simhyper(R = 2, nsamp = 100000, nsamp.check = 5000, Amat = mat)
 # cat("RW1 prior: \n")
@@ -553,8 +555,8 @@ priors <- list(a.iid = 0.5, a.rw1=0.5, a.rw2 = 0.5, a.icar=0.5, b.iid = 0.001487
 
 # inla_model <- NULL
 inla_model.national <- NULL
-inla_model.national[[1]] <- fitINLA_yearly(data.national, geo = NULL, priors = priors, useHyper = TRUE, Amat = NULL, year_names = years.all, rw = 1, year_range = year_range, m = 5, is.yearly = TRUE)
-inla_model.national[[2]] <- fitINLA_yearly(data.national, geo = NULL, priors = priors, useHyper = TRUE, Amat = NULL, year_names = years.all, rw = 2, year_range = year_range, m = 5, is.yearly = TRUE)
+inla_model.national[[1]] <- fitINLA(data.national, geo = NULL, priors = priors, useHyper = TRUE, Amat = NULL, year_names = years.all, rw = 1, year_range = year_range, m = 5, is.yearly = TRUE)
+inla_model.national[[2]] <- fitINLA(data.national, geo = NULL, priors = priors, useHyper = TRUE, Amat = NULL, year_names = years.all, rw = 2, year_range = year_range, m = 5, is.yearly = TRUE)
 
 ######################################################################
 ## Perform benchmarking to UN B3 and refit national models
@@ -648,8 +650,8 @@ for(i in 1:length(years.all)){
 	data.national.adj[which.sub, ] <- sub.new
 }
 
-inla_model.national[[3]] <- fitINLA_yearly(data.national.adj, geo = NULL, priors = priors, useHyper = TRUE, Amat = NULL, year_names = years.all, rw = 1, year_range = year_range, m = 5, is.yearly = TRUE)
-inla_model.national[[4]] <- fitINLA_yearly(data.national.adj, geo = NULL, priors = priors, useHyper = TRUE, Amat = NULL, year_names = years.all, rw = 2, year_range = year_range, m = 5, is.yearly = TRUE)
+inla_model.national[[3]] <- fitINLA(data.national.adj, geo = NULL, priors = priors, useHyper = TRUE, Amat = NULL, year_names = years.all, rw = 1, year_range = year_range, m = 5, is.yearly = TRUE)
+inla_model.national[[4]] <- fitINLA(data.national.adj, geo = NULL, priors = priors, useHyper = TRUE, Amat = NULL, year_names = years.all, rw = 2, year_range = year_range, m = 5, is.yearly = TRUE)
 
 results.original <- results
 mod <- inla_model.national[[4]]$fit
@@ -689,13 +691,13 @@ estimates.national.final <- rbind(sub1, sub2, sub4)
 
 ######################################################################
 ## Fit subnational models with both adjusted and unadjusted data
-source("../HelperFunctions/inla_function_yearly.R")
+# source("../HelperFunctions/inla_function_yearly.R")
 
 inla_model.yearly <- NULL
-inla_model.yearly[[1]] <- fitINLA_yearly(data, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 1, year_range = year_range, m=5, is.yearly=TRUE)
-inla_model.yearly[[2]] <- fitINLA_yearly(data, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 2, year_range = year_range, m=5, is.yearly=TRUE)
-inla_model.yearly[[3]] <- fitINLA_yearly(data.adj, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 1, year_range = year_range, m=5, is.yearly=TRUE, type.st = 4)
-inla_model.yearly[[4]] <- fitINLA_yearly(data.adj, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 2, year_range = year_range, m=5, is.yearly=TRUE, type.st = 4)
+inla_model.yearly[[1]] <- fitINLA(data, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 1, year_range = year_range, m=5, is.yearly=TRUE)
+inla_model.yearly[[2]] <- fitINLA(data, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 2, year_range = year_range, m=5, is.yearly=TRUE)
+inla_model.yearly[[3]] <- fitINLA(data.adj, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 1, year_range = year_range, m=5, is.yearly=TRUE, type.st = 4)
+inla_model.yearly[[4]] <- fitINLA(data.adj, geo = geo,  priors = priors, useHyper=TRUE, Amat = mat, year_names = years.all,  rw = 2, year_range = year_range, m=5, is.yearly=TRUE, type.st = 4)
 
 
 ######################################################################
@@ -764,7 +766,7 @@ out <- list(countryname = countryname,
 			data.HT.combined.national = data.national.adj
 )
 out$data.HT$survey.label <- surveylabels[out$data.HT$survey]
-save(out, file = paste0("Fitted/", countryname, "-yearly.rda"))
-
+save(out, file = paste0("Fitted-new/", countryname, "-yearly.rda"))
+source("Diag.R")
 
 
